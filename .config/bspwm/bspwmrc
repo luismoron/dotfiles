@@ -3,10 +3,9 @@
 sxhkd &
 #xrandr -s 1920x1440 &
 #bash ~/.config/polybar/launch.sh --shades &
-start_conky &
+start_conky_live_maia &
 nitrogen --restore &
 picom -b &
-bash ~/.config/polybar/launch.sh --shades &
 
 #feh --bg-fill /home/luism/Imágenes/images.jpeg
 bspc config pointer_modifier mod1

@@ -3,8 +3,9 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
-set $terminal i3-sensible-terminal
-#set $terminal kitty
+#set $terminal i3-sensible-terminal
+#set $terminal tilix
+set $terminal kitty
 #set $terminal terminator
 
 
@@ -47,7 +48,7 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec $terminal -e 'alsamixer'
 exec --no-startup-id pulseaudio
 #exec --no-startup-id pa-applet
@@ -63,7 +64,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
 bindsym $mod+Ctrl+a exec $terminal -e 'setup'
 bindsym $mod+F2 exec firefox 
-bindsym $mod+F3 exec pcmanf
+bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec $terminal -e 'mocp'
@@ -276,7 +277,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # Autostart applications
 #exec_always --no-startup-id workstyle  
-#exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id start_conky
 # exec --no-startup-id blueman
 exec --no-startup-id clipit
