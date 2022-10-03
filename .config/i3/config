@@ -3,9 +3,9 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4
-#set $terminal i3-sensible-terminal
+set $terminal i3-sensible-terminal
 #set $terminal tilix
-set $terminal kitty
+#set $terminal kitty
 #set $terminal terminator
 
 
@@ -276,6 +276,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id dex-autostart --autostart --environment i3
 
 # Autostart applications
+exec --no-startup-id /home/luism/.screenlayout/resolutions.sh
 #exec_always --no-startup-id workstyle  
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id start_conky
