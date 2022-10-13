@@ -19,6 +19,10 @@ dnf remove i3 -x perl*,dejavu-sans-mono-fonts,vte-profile,vte291,xcb-util-cursor
 dnf install git libnotify notification-daemon breeze-cursor-theme neovim ranger zsh polkit-gnome dnfdragora dnfdragora-updater qt5ct mplayer lightdm-slick-greeter xfce4-power-manager redshift redshift-gtk lxappearance ranger bat lsd file-roller picom g++ clipit materia-gtk-theme xclip xarchiver zip unzip unrar conky gtk-murrine-engine gtk2-engines viewnior zsh zsh-autosuggestions zsh-syntax-highlighting xbacklight -y;
 dnf update -y;
 
+#Plugin Neovim zsh-history-substring-search
+
+git clone https://github.com/zsh-users/zsh-history-substring-search
+
 #Neovim NVchad
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
