@@ -8,12 +8,12 @@ fi
 # Use powerline
 USE_POWERLINE="true"
 # Source manjaro-zsh-configuration
-if [[ -e /usr/share/zsh/fedora-zsh-config ]]; then
-  source /usr/share/zsh/fedora-zsh-config
+if [[ -e /usr/share/zsh/arch-zsh-config ]]; then
+  source /usr/share/zsh/arch-zsh-config
 fi
 # Use manjaro zsh prompt
-if [[ -e /usr/share/zsh/fedora-zsh-prompt ]]; then
-  source /usr/share/zsh/fedora-zsh-prompt
+if [[ -e /usr/share/zsh/arch-zsh-prompt ]]; then
+  source /usr/share/zsh/arch-zsh-prompt
 fi
 
 # Manual configuration
