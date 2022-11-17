@@ -5,9 +5,9 @@
 set $mod Mod4
 #set $terminal i3-sensible-terminal
 #set $terminal tilix
-set $terminal kitty
+#set $terminal kitty
 #set $terminal terminator
-#set $terminal urxvt
+set $terminal urxvt
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
