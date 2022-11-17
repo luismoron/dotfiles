@@ -15,7 +15,7 @@ dnf install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$
 dnf install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
 dnf groupinstall "development tools";
 dnf copr enable fuhrmann/i3-gaps -y;
-dnf remove i3 -x perl*,dejavu-sans-mono-fonts,vte-profile,vte291,xcb-util-cursor,xcb-util-keysyms, xcb-util-wm, xdg-user-dirs,xfce4-terminal,xorg-x11-fonts-misc,xss-lock;
+dnf remove i3 -x perl*,dejavu-sans-mono-fonts,vte-profile,vte291,xcb-util-cursor,xcb-util-keysyms,xcb-util-wm,xdg-user-dirs,xfce4-terminal,xorg-x11-fonts-misc,xss-lock;
 dnf install git libnotify notification-daemon breeze-cursor-theme neovim ranger zsh polkit-gnome dnfdragora dnfdragora-updater qt5ct mplayer lightdm-slick-greeter xfce4-power-manager redshift redshift-gtk lxappearance ranger bat lsd file-roller picom g++ clipit materia-gtk-theme xclip xarchiver zip unzip unrar conky gtk-murrine-engine gtk2-engines viewnior zsh zsh-autosuggestions zsh-syntax-highlighting xbacklight -y;
 dnf update -y;
 
