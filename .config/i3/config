@@ -60,7 +60,7 @@ bindsym $mod+Ctrl+m exec pavucontrol
 bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
 bindsym $mod+Ctrl+a exec $terminal -e 'setup'
 bindsym $mod+F2 exec firefox 
-bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec $terminal -e 'mocp'
@@ -274,7 +274,7 @@ exec --no-startup-id volumeicon
 exec --no-startup-id cbatticon
 
 # Autostart applications
-exec --no-startup-id /home/luis/.screenlayout/resolutions.sh
+exec --no-startup-id /home/luism/.screenlayout/resolutions.sh
 #exec_always --no-startup-id workstyle  
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id start_conky
