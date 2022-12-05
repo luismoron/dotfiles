@@ -1,4 +1,4 @@
-﻿setxkbmap es &
+﻿setxkbmap latam &
 nm-applet &
 udiskie -t &
 picom \&
