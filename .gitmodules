@@ -1,0 +1,3 @@
+[submodule "/home/luism/dotfiles/.config/ranger"]
+	path = /home/luism/dotfiles/.config/ranger
+	url = https://gitlab.manjaro.org/profiles-and-settings/manjaro-ranger-settings.git

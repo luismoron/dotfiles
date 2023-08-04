@@ -1,0 +1,7 @@
+#!/bin/bash
+
+conky -c /usr/share/conky/conky_live_maia &&
+conky -c /usr/share/conky/conky_maia &&
+#conky -c /usr/share/conky/conkyrc
+
+exit 0

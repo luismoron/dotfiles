@@ -1,0 +1,35 @@
+conky.config = {
+	alignment = 'bottom_left',
+	background = true,
+	color2 = '5D7B86',
+	cpu_avg_samples = 2,
+	default_color = 'F9FAF9',
+	double_buffer = true,
+	font = 'Bitstream Vera Sans:size=8',
+	draw_shades = false,
+	gap_x = 25,
+	gap_y = 45,
+	minimum_width = 200,
+	no_buffers = true,
+	own_window = true,
+	own_window_type = 'override',
+	own_window_transparent = true,
+	update_interval = 2.0,
+	use_xft = true,
+}
+conky.text = [[
+
+${color2}Terminal - ${color}Mod+Enter
+${color2}kill focused - ${color}Mod+Shift+q
+${color2}Firefox - ${color}Mod+F2
+${color2}toggle split direction - ${color}Mod+q
+${color2}dmenu - ${color}Mod+d
+${color2}bmenu - ${color}Mod+Ctrl+b
+${color2}switch to workspace 1-8 - ${color}Mod+1-8
+${color2}send to workspace 1-8 - ${color}Mod+Ctrl+1-8
+${color2}navigate workspaces - ${color}Mod+Ctrl+arrowkeys
+${color2}toggle floating - ${color}Mod+Shift+Space
+${color2}Salir i3 - ${color}Mod+0
+
+${color2}Mod=${color}Super
+]]
