@@ -78,8 +78,8 @@ bindsym $mod+Ctrl+s --release exec --no-startup-id maim -s | xclip -selection cl
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+w exec whatsapp 
 bindsym $mod+shift+t exec telegram
-bindsym $mod+Shift+m exec flatpak run --file-forwarding --command=sh com.spotify.Client -c 'eval "$(sed s#LD_PRELOAD=#LD_PRELOAD=$HOME/.spotify-adblock/spotify-adblock.so:#g /app/bin/spotify)"' @@u %U @@ 
-bindsym $mod+Shift+e exec mailspring
+bindsym $mod+Shift+m exec spotify
+bindsym $mod+Shift+e exec geary
 
 # focus_follows_mouse no
 
