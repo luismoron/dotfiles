@@ -91,18 +91,6 @@ Class on i3Wm
 xprop | grep WM_CLASS | awk '{ print $4 }'
 Clip on de app
 
-
-Spotify Adblock 
-
-git clone https://github.com/abba23/spotify-adblock.git
-cd spotify-adblock
-make
-sudo make install
-
-mkdir -p ~/.spotify-adblock && cp target/release/libspotifyadblock.so ~/.spotify-adblock/spotify-adblock.so
-mkdir -p ~/.config/spotify-adblock && cp config.toml ~/.config/spotify-adblock
-flatpak override --user --filesystem="~/.spotify-adblock/spotify-adblock.so" --filesystem="~/.config/spotify-adblock/config.toml" com.spotify.Client
-
 #Verifi web Browser 
 
 xdg-settings get default-web-browser

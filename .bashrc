@@ -163,16 +163,6 @@ alias removes="sudo snap remove"
 
 PATH="$PATH":root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/var/lib/snapd/snap/bin:/opt/flutter/bin
 
-# User specific environment
-export PATH="$PATH:$HOME/opt/flutter/bin"
-export ANDROID_HOME="$HOME/Android/Sdk/"
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/tools/bin:$PATH
-#export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-17.0.6.0.10-1.fc37.x86_64/
-#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.fc38.x86_64/
-export PATH="$PATH:$HOME/.cargo/bin/"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -262,3 +252,20 @@ alias grmc="git rm -r --cached"
 # Docker Alias Commands
 #-------------------------------------------------------------
 #
+
+
+#flutter
+export FLUTTER_HOME=/opt/flutter/
+export PATH=$FLUTTER_HOME/bin:$PATH
+
+#android home
+export ANDROID_HOME=/home/luism/Android/Sdk
+export PATH=$ANDROID_HOME/cmdline-tools:$PATH
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+
+#android sdk root
+export ANDROID_SDK_ROOT=/home/luism/Android/Sdk
+export PATH=$ANDROID_SDK_ROOT:$PATH
