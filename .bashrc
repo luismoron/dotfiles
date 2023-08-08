@@ -269,3 +269,7 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 #android sdk root
 export ANDROID_SDK_ROOT=/home/luism/Android/Sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
+
+#gradle
+export GRADLE_HOME=/opt/gradle
+export PATH=$GRADLE_HOME/bin:$PATH
