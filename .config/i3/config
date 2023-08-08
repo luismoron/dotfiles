@@ -33,7 +33,7 @@ floating_modifier $mod
 bindsym $mod+Return exec $terminal
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
@@ -115,7 +115,7 @@ bindsym $mod+Shift+b move container to workspace number back_and_forth; workspac
 # split orientation
 bindsym $mod+h split h;exec notify-send 'tile horizontally'
 bindsym $mod+v split v;exec notify-send 'tile vertically'
-bindsym $mod+q split toggle
+bindsym $mod+Shift+q split toggle
 
 # toggle fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -246,7 +246,13 @@ for_window [class="GitHub Desktop"] floating enable
 for_window [class="Setroubleshoot"] floating enable
 for_window [class="jetbrains-studio" window_type="splash" ] floating enable
 for_window [class="jetbrains-studio" title="Android Studio Setup Wizard"] floating enable
+for_window [class="jetbrains-studio" title="Import Android Studio Settings"] floating enable
+for_window [class="firefox" id=41943117 instance="Devtools"] floating enable
+for_window [id=50331653 title="Android Emulator - Pixel_2:5554"] floating enable
+for_window [id=41943045 title="Android Emulator - Pixel_2:5554"] floating enable
 for_window [class="Genymotion"] floating enable
+for_window [class="firefox"  instance="Places"] floating enable
+for_window [class="firefox"  instance="Devtools"] floating enable
 
 # switch to workspace with urgent window automatically
 
@@ -360,8 +366,8 @@ bar {
 
 	bindsym button4 nop
 	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
+	font xft:URWGothic-Book 11
+	strip_workspace_numbers no
 
     colors {
         background #0f2235
