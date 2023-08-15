@@ -1,10 +1,10 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference! 
 
-
+exec --no-startup-id pkill volumeicon picom xfce4-power-manager clipit blueman-applet
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
-set $mod Mod4
+set $mod Mod4 
 set $terminal xfce4-terminal
 
 # set default desktop layout (default is tiling)
@@ -37,7 +37,6 @@ bindsym $mod+q kill
 
 # start program launcher
 bindsym $mod+d exec --no-startup-id dmenu_recency
-
 #bindsym $mod+d exec --no-startup-id dmenu_run
 
 # Start Rofi Launcher
@@ -62,14 +61,14 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Start Applications
+# Start applications
 bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
 bindsym $mod+Ctrl+a exec $terminal -e 'setup'
 bindsym $mod+F2  exec microsoft-edge-dev
 bindsym $mod+F3 exec thunar
 # bindsym $mod+F3 exec ranger
 bindsym $mod+F5 exec $terminal -e 'mocp'
-bindsym $mod+t exec --no-startup-id pkill picom
+bindsym $mod+t exec --no-startup-id pkill picom 
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
 bindsym F11 exec --no-startup-id i3-scrot
@@ -333,11 +332,13 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # Autostart applications
 #exec_always --no-startup-id workstyle  
+# Kill if already running
 exec --no-startup-id nitrogen --restore; sleep 1; picom -b
 exec --no-startup-id start_conky
 exec --no-startup-id udiskie -T
 exec --no-startup-id blueman-applet
 exec --no-startup-id clipit
+exec --no-startup-id volumeicon
 exec --no-startup-id desktop-items
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
