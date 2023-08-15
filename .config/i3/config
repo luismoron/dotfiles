@@ -156,7 +156,6 @@ bindsym $mod+Ctrl+Left workspace prev
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
 
-
 set $ws1 number 1
 set $ws2 number 2
 set $ws3 number 3
@@ -259,17 +258,14 @@ for_window [class="firefox"  instance="Devtools"] floating enable
 
 # switch to workspace with urgent window automatically
 
-
 for_window [urgent=latest] focus
 for_window [instance="crx__abnfpfhjmipcnaibcolbacfhgfcmjjbn"] floating enable
-
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
@@ -333,26 +329,19 @@ mode "resize" {
 bindsym $mod+9 exec --no-startup-id blurlock
 exec --no-startup-id dex-autostart --autostart --environment i3
 
-
 # Autostart applications
 #exec_always --no-startup-id workstyle  
 # Kill if already running
 exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/bosque.jpg 
 exec --no-startup-id sleep 1; picom -b
 exec --no-startup-id start_conky
-#exec --no-startup-id udiskie -T
 exec --no-startup-id blueman-applet
 exec --no-startup-id clipit
-#exec --no-startup-id volumeicon
-#exec --no-startup-id desktop-items
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1
-# exec_always --no-startup-id sbxkb
-# exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id setcursor
 exec --no-startup-id xdg-user-dirs-update
-#exec --no-startup-id xss-lock --transfer-sleep-lock | blurlock
 exec --no-startup-id xautolock -time 10 -locker blurlock
 
 # set powersavings for display:
@@ -361,7 +350,6 @@ exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	#i3bar_command i3bar
 	status_command i3status -c ~/.config/i3status/i3status.conf
 	position bottom
 
