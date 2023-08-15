@@ -64,8 +64,6 @@ bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # Start applications
-#bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
-#bindsym $mod+Ctrl+a exec $terminal -e 'setup'
 bindsym $mod+F2  exec firefox
 bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
@@ -332,13 +330,13 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # Autostart applications
 #exec_always --no-startup-id workstyle  
 # Kill if already running
-exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/bosque.jpg 
-exec --no-startup-id sleep 1; picom -b
+exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/fedora.png
+exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky
 exec --no-startup-id blueman-applet
 exec --no-startup-id clipit
 exec --no-startup-id nm-applet
-exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1
+exec --no-startup-id /usr/lib/polkit-1/polkitd
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id setcursor
 exec --no-startup-id xdg-user-dirs-update
