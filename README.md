@@ -20,7 +20,7 @@ ln -s /home/luism/dotfiles/.bashrc /home/luism/;
 
 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm;
 
-install  playerctl conky system-config-printer blueman cargo hplip xfce4-screenshooter nitrogen rofi polkit-gnome neovim lightdm-slick-greeter xfce4-power-manager qt5ct lxappearance bat lsd file-roller picom g++ clipit thunar-volman xkill viewnior gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk udiskie sqlite unrar p7zip;
+install  playerctl conky system-config-printer blueman cargo hplip xfce4-screenshooter nitrogen rofi polkit-gnome neovim lightdm-slick-greeter xfce4-power-manager qt5ct lxappearance bat lsd file-roller picom g++ clipit thunar-volman xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk udiskie sqlite unrar p7zip;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin;
 
