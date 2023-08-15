@@ -1,7 +1,7 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference! 
 
-exec --no-startup-id pkill volumeicon picom xfce4-power-manager clipit blueman-applet
+
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4 
@@ -40,16 +40,14 @@ bindsym $mod+d exec --no-startup-id dmenu_recency
 #bindsym $mod+d exec --no-startup-id dmenu_run
 
 # Start Rofi Launcher
-bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons -fonts "Roboto 8"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun
 
 # launch categorized menu
-bindsym $mod+z exec --no-startup-id morc_menu
 
-################################################################################################
+###############################################################################################
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-exec --no-startup-id volumeicon
 #bindsym $mod+Ctrl+m exec $terminal -e 'alsamixer'
 bindsym $mod+Ctrl+m exec pavucontrol
 
@@ -61,24 +59,30 @@ bindsym XF86AudioPause exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
+# Brightness Control
+bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 5; notify-send 'Brightness Up'" 
+bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 5; notify-send 'Brightness down'" 
+
 # Start applications
-bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
-bindsym $mod+Ctrl+a exec $terminal -e 'setup'
-bindsym $mod+F2  exec microsoft-edge-dev
-bindsym $mod+F3 exec thunar
+#bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
+#bindsym $mod+Ctrl+a exec $terminal -e 'setup'
+bindsym $mod+F2  exec firefox
+bindsym $mod+F3 exec pcmanfm
 # bindsym $mod+F3 exec ranger
-bindsym $mod+F5 exec $terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill picom 
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
 bindsym F11 exec --no-startup-id i3-scrot
-bindsym $mod+Ctrl+p --release exec --no-startup-id xfce4-screenshooter -f
-bindsym $mod+Ctrl+s --release exec --no-startup-id maim -s | xclip -selection clipboard -t image/png -i
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 bindsym $mod+Shift+w exec whatsapp 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+e exec geary
+
+# Screen Shooot
+
+bindsym $mod+Mod1+p --release exec maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
+bindsym $mod+Mod1+s --release exec maim --select | tee ~/Pictures/$(date +%r).png | xclip -sel c -t image/png
 
 # focus_follows_mouse no
 
