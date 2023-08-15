@@ -60,8 +60,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Brightness Control
-bindsym XF86MonBrightnessUp exec --no-startup-id "light -A 5; notify-send 'Brightness Up'" 
-bindsym XF86MonBrightnessDown exec --no-startup-id "light -U 5; notify-send 'Brightness down'" 
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # Start applications
 #bindsym $mod+Ctrl+b exec $terminal -e 'bmenu'
@@ -337,23 +337,23 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # Autostart applications
 #exec_always --no-startup-id workstyle  
 # Kill if already running
-exec --no-startup-id nitrogen --restore; sleep 1; picom -b
+exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/bosque.jpg 
+exec --no-startup-id sleep 1; picom -b
 exec --no-startup-id start_conky
-exec --no-startup-id udiskie -T
+#exec --no-startup-id udiskie -T
 exec --no-startup-id blueman-applet
 exec --no-startup-id clipit
-exec --no-startup-id volumeicon
-exec --no-startup-id desktop-items
+#exec --no-startup-id volumeicon
+#exec --no-startup-id desktop-items
 exec --no-startup-id nm-applet
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-1/polkit-agent-helper-1
 # exec_always --no-startup-id sbxkb
-exec --no-startup-id xfce4-power-manager
+# exec --no-startup-id xfce4-power-manager
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id setcursor
 exec --no-startup-id xdg-user-dirs-update
 #exec --no-startup-id xss-lock --transfer-sleep-lock | blurlock
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec_always --no-startup-id dnfdragora-updater
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -361,7 +361,7 @@ exec_always --no-startup-id workstyle &> /tmp/workstyle.log
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
-	i3bar_command i3bar
+	#i3bar_command i3bar
 	status_command i3status -c ~/.config/i3status/i3status.conf
 	position bottom
 
