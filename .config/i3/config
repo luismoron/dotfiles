@@ -1,11 +1,9 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference! 
 
-
-
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4 
-set $terminal xfce4-terminal
+set $terminal urxvt
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -199,7 +197,7 @@ bindsym $mod+Shift+8 move container to workspace $ws8; workspace $ws8
 # assign [class="Skype"] $ws5
 
 # Open specific applications in floating mode
-for_window [title="alsamixer"] floating enable border pixel 1
+for_window [title="alsamixer"]floating enable sticky enable
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="fpakman"] floating enable
@@ -332,7 +330,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # Kill if already running
 exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/fedora.png
 exec --no-startup-id sleep 1; picom --daemon
-exec --no-startup-id start_conky
+exec --no-startup-id start_conky --daemonize
 exec --no-startup-id blueman-applet
 exec --no-startup-id clipit
 exec --no-startup-id nm-applet
