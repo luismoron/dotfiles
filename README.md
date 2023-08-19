@@ -11,7 +11,10 @@ keepcache=True
 
 sudo dnf groupinstall "development tools" -y; 
 
+# OH-MY-BASH
 
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+ 
 rm ~/.bashrc;
 ln -s /home/luism/dotfiles/.bashrc /home/luism/;
 
@@ -20,7 +23,7 @@ ln -s /home/luism/dotfiles/.bashrc /home/luism/;
 
 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm;
 
-install  playerctl conky system-config-printer blueman cargo hplip xfce4-screenshooter nitrogen rofi polkit-gnome neovim lightdm-slick-greeter xfce4-power-manager qt5ct lxappearance bat lsd file-roller picom g++ clipit thunar-volman xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk udiskie sqlite unrar p7zip;
+install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift  udiskie sqlite unrar p7zip;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin;
 
@@ -31,7 +34,11 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 git clone https://github.com/vinceliuice/Matcha-gtk-theme.git;
 cd Matcha-gtk-theme;
-./install.sh;
+./install.sh ;
+cd ~
+git clone https://github.com/yeyushengfan258/Win11-icon-theme.git;
+cd Win11-icon-theme;
+./install -blue
 
 
 Enlaces Simbolicos
@@ -45,8 +52,9 @@ ln -s /home/luism/dotfiles/.nanorc /home/luism/;
 ln -s /home/luism/dotfiles/.dmenurc /home/luism/;
 ln -s /home/luism/dotfiles/.profile /home/luism/;
 ln -s /home/luism/dotfiles/.local/share/rofi/ /home/luism/.local/share/;
-ln -s /home/luism/dotfiles/.config/dunst /home/luism/.config/
-ln -s /home/luism/dotfiles/.config/rofi /home/luism/.config/
+ln -s /home/luism/dotfiles/.config/dunst /home/luism/.config/;
+ln -s /home/luism/dotfiles/.config/rofi /home/luism/.config/;
+ln -s /home/luism/dotfiles/.Xresources /home/luism/;
 
 sudo su
 
