@@ -3,7 +3,7 @@
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4 
-set $terminal urxvt
+set $terminal xfce4-terminal
 
 # set default desktop layout (default is tiling)
 # workspace_layout tabbed <stacking|tabbed>
@@ -328,7 +328,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # Autostart applications
 #exec_always --no-startup-id workstyle  
 # Kill if already running
-exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/fedora.png
+exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/pxfuel.jpg
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
