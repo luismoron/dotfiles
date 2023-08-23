@@ -9,7 +9,8 @@ max_parallel_downloads=10
 defaultyes=True
 keepcache=True
 
-sudo dnf groupinstall "development tools" -y; 
+sudo dnf groupinstall "development tools" -y;
+sudo dnf install dnf5 -y;
 
 # OH-MY-BASH
 
@@ -17,27 +18,28 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/mast
  
 rm ~/.bashrc;
 ln -s /home/luism/dotfiles/.bashrc /home/luism/;
+update -y; 
 
-
-# dnf update -y; 
+# PACKAGE TO INSTALL
 
 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
 install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift  udiskie sqlite unrar p7zip redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk  -y;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
-#Flatpak  to flathub
+# FLATPAK TO FLATHUB REPO
+
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-#Theme Matcha
+# Theme Matcha and Win11 icons 
 
 git clone https://github.com/vinceliuice/Matcha-gtk-theme.git;
-cd!$;
+cd Matcha-gtk-theme;
 ./install.sh -t azul;
-cd ;
+cd ~;
 git clone https://github.com/yeyushengfan258/Win11-icon-theme.git;
-cd!$;
-./install -blue
+cd Win11-icon-theme;
+./install.sh -blue;
 
 
 Enlaces Simbolicos
@@ -55,7 +57,7 @@ ln -s /home/luism/dotfiles/.config/dunst /home/luism/.config/;
 ln -s /home/luism/dotfiles/.config/rofi /home/luism/.config/;
 ln -s /home/luism/dotfiles/.Xresources /home/luism/;
 
-sudo su
+# With sudo or ROOT
 
 ln -s /home/luism/dotfiles/usr/bin/dmenu_recency /usr/bin/;
 ln -s /home/luism/dotfiles/usr/bin/i3exit /usr/bin/;
@@ -73,7 +75,7 @@ cp -r /home/luism/dotfiles/usr/share/fonts/TTF /usr/share/fonts;
 cp -r /home/luism/dotfiles/usr/share/fonts/Roboto /usr/share/fonts;
 cp -r /home/luism/dotfiles/usr/share/fonts/RobotoMono /usr/share/fonts;
 
-#Plugin Neovim zsh-history-substring-search
+# Plugin Neovim zsh-history-substring-search
 
 mkdir -p /usr/share/zsh/plugins;
 cd /usr/share/zsh/plugins;
@@ -95,19 +97,16 @@ Section "InputClass"
     Option "TappingButtonMap" "lmr"
 EndSection
 
-#Neovim NVchad
+# Neovim NVchad
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash;
+nvm install 18;
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim
-
-Class on i3Wm
-xprop | grep WM_CLASS | awk '{ print $4 }'
-Clip on de app
-
-#Verifi web Browser 
+# Verifications web Browser 
 
 xdg-settings get default-web-browser
 
-#Set Defalt Browser
+# Set Defalt Browser
 
 xdg-mime default com.microsoft.EdgeDev.desktop x-scheme-handler/https x-scheme-handler/http 
 
