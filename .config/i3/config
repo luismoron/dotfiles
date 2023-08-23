@@ -331,7 +331,6 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/fedora.png
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
-exec --no-startup-id blueman-applet
 exec --no-startup-id clipit
 exec --no-startup-id nm-applet
 exec --no-startup-id /usr/lib/polkit-1/polkitd

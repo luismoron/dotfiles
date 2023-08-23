@@ -27,7 +27,7 @@ install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
-# FLATPAK TO FLATHUB REPO
+# Flathub Repo
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
@@ -93,7 +93,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash;
 nvm install 18;
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 
-# TOUCH TO CLICK
+# Touch to click
 
 nano /etc/X11/xorg.conf.d/30-touchpad.conf
 Section "InputClass"
