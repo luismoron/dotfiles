@@ -47,7 +47,7 @@ cd Win11-icon-theme;
 rm -rf /home/luism/.config/i3;
 ln -s /home/luism/dotfiles/.config/i3 /home/luism/.config/;
 ln -s /home/luism/dotfiles/.config/i3status /home/luism/.config/;
-ln -s /home/luism/dotfiles/.config/picom /home/luism/.config/;
+ln -s /home/luism/dotfiles/.config/picom.conf /home/luism/.config/;
 ln -s /home/luism/dotfiles/.zshrc /home/luism/;
 ln -s /home/luism/dotfiles/.dir_colors /home/luism/;
 ln -s /home/luism/dotfiles/.nanorc /home/luism/;
@@ -60,13 +60,13 @@ ln -s /home/luism/dotfiles/.Xresources /home/luism/;
 
 # With sudo or ROOT
 
-ln -s /home/luism/dotfiles/usr/bin/dmenu_recency /usr/bin/;
-ln -s /home/luism/dotfiles/usr/bin/i3exit /usr/bin/;
-ln -s /home/luism/dotfiles/usr/bin/i3-scrot /usr/bin/;
-ln -s /home/luism/dotfiles/usr/bin/start_conky /usr/bin/;
-ln -s /home/luism/dotfiles/usr/bin/ff-theme-util /usr/bin/;
-ln -s /home/luism/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/luism/dotfiles/usr/bin/setcursor /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/dmenu_recency /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/i3exit /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/i3-scrot /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/start_conky /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/ff-theme-util /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/blurlock /usr/bin/;
+ln -s /home/luism/dotfiles.config/i3/scripts/setcursor /usr/bin/;
 ln -s /home/luism/dotfiles/usr/share/conky/ /usr/share/;
 ln -s /home/luism/dotfiles/usr/share/nano-syntax-highlighting /usr/share/;
 ln -s /home/luism/dotfiles/usr/share/zsh/fedora-zsh-config /usr/share/zsh/;
