@@ -42,7 +42,8 @@ cd Win11-icon-theme;
 ./install.sh -blue;
 
 
-Enlaces Simbolicos
+# Simbolyc Link
+
 rm -rf /home/luism/.config/i3;
 ln -s /home/luism/dotfiles/.config/i3 /home/luism/.config/;
 ln -s /home/luism/dotfiles/.config/i3status /home/luism/.config/;
