@@ -6,7 +6,7 @@ esac
 
 # scripts
 ## Export bspwm/bin dir to PATH
-export PATH="${PATH}:/home/luism/dotfiles/.config/i3/scripts/"
+# export PATH="${PATH}:/home/luism/dotfiles/.config/i3/scripts/"
 
 
 
