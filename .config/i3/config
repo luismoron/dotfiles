@@ -252,6 +252,7 @@ for_window [title="Android Emulator - Pixel_2:5554"] floating enable
 for_window [class="Genymotion"] floating enable
 for_window [class="firefox"  instance="Places"] floating enable
 for_window [class="firefox"  instance="Devtools"] floating enable
+for_window [class="Gnome-disks"] floating enable
 
 # switch to workspace with urgent window automatically
 
