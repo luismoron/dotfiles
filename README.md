@@ -87,9 +87,15 @@ wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.
 cd /usr/share;
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh-theme-powerlevel10k
 
-touch to click
+# Neovim NVchad
 
-sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash;
+nvm install 18;
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
+
+# TOUCH TO CLICK
+
+nano /etc/X11/xorg.conf.d/30-touchpad.conf
 Section "InputClass"
     Identifier "touchpad"
     Driver "libinput"
@@ -98,16 +104,11 @@ Section "InputClass"
     Option "TappingButtonMap" "lmr"
 EndSection
 
-# Neovim NVchad
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash;
-nvm install 18;
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
-
 # Verifications web Browser 
 
 xdg-settings get default-web-browser
 
-# Set Defalt Browser
+# Set Default Browser
 
 xdg-mime default com.microsoft.EdgeDev.desktop x-scheme-handler/https x-scheme-handler/http 
 
