@@ -21,11 +21,10 @@ ln -s /home/luism/dotfiles/.bashrc /home/luism/;
 
 # dnf update -y; 
 
-install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm;
-
-install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift  udiskie sqlite unrar p7zip;
+install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
+install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock redshift  udiskie sqlite unrar p7zip redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk  -y;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
-install docker-ce docker-ce-cli containerd.io docker-compose-plugin;
+install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
 #Flatpak  to flathub
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -33,11 +32,11 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 #Theme Matcha
 
 git clone https://github.com/vinceliuice/Matcha-gtk-theme.git;
-cd Matcha-gtk-theme;
-./install.sh ;
-cd ~
+cd!$;
+./install.sh -t azul;
+cd ;
 git clone https://github.com/yeyushengfan258/Win11-icon-theme.git;
-cd Win11-icon-theme;
+cd!$;
 ./install -blue
 
 
