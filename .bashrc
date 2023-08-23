@@ -4,6 +4,12 @@ case $- in
     *) return;;
 esac
 
+# scripts
+## Export bspwm/bin dir to PATH
+export PATH="${PATH}:/home/luism/dotfiles/.config/i3/scripts/"
+
+
+
 # Path to your oh-my-bash installation.
 export OSH='/home/luism/.oh-my-bash'
 
