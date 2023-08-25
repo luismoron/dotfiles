@@ -23,7 +23,7 @@ update -y;
 # PACKAGE TO INSTALL
 
 install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
-install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock udiskie sqlite unrar p7zip redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk  -y;
+install  playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light xfce4-power-manager nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock udiskie sqlite unrar p7zip redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk  -y;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
@@ -60,13 +60,13 @@ ln -s /home/luism/Templates/dotfiles/.Xresources /home/luism/;
 
 # With sudo or ROOT
 
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/dmenu_recency /usr/bin/;
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/i3exit /usr/bin/;
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/i3-scrot /usr/bin/;
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/start_conky /usr/bin/;
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/ff-theme-util /usr/bin/;
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/blurlock /usr/bin/;
-ln -s /home/luism/Templates/dotfiles.config/i3/scripts/setcursor /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/dmenu_recency /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/i3exit /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/i3-scrot /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/start_conky /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/ff-theme-util /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/blurlock /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/bin/setcursor /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/share/conky/ /usr/share/;
 ln -s /home/luism/Templates/dotfiles/usr/share/nano-syntax-highlighting /usr/share/;
 ln -s /home/luism/Templates/dotfiles/usr/share/zsh/fedora-zsh-config /usr/share/zsh/;
@@ -90,6 +90,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh-
 # Neovim NVchad
 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash;
+source ~/.bashrc;
 nvm install 18;
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 
