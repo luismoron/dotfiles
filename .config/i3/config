@@ -338,7 +338,7 @@ exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id setcursor
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id xfce4-powermanager
+exec --no-startup-id xfce4-power-manager
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
