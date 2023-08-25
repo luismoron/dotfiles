@@ -17,7 +17,7 @@ sudo dnf install dnf5 -y;
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
  
 rm ~/.bashrc;
-ln -s /home/luism/dotfiles/.bashrc /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.bashrc /home/luism/;
 update -y; 
 
 # PACKAGE TO INSTALL
@@ -45,36 +45,36 @@ cd Win11-icon-theme;
 # Simbolyc Link
 
 rm -rf /home/luism/.config/i3;
-ln -s /home/luism/dotfiles/.config/i3 /home/luism/.config/;
-ln -s /home/luism/dotfiles/.config/i3status /home/luism/.config/;
-ln -s /home/luism/dotfiles/.config/picom.conf /home/luism/.config/;
-ln -s /home/luism/dotfiles/.zshrc /home/luism/;
-ln -s /home/luism/dotfiles/.dir_colors /home/luism/;
-ln -s /home/luism/dotfiles/.nanorc /home/luism/;
-ln -s /home/luism/dotfiles/.dmenurc /home/luism/;
-ln -s /home/luism/dotfiles/.profile /home/luism/;
-ln -s /home/luism/dotfiles/.local/share/rofi/ /home/luism/.local/share/;
-ln -s /home/luism/dotfiles/.config/dunst /home/luism/.config/;
-ln -s /home/luism/dotfiles/.config/rofi /home/luism/.config/;
-ln -s /home/luism/dotfiles/.Xresources /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.config/i3 /home/luism/.config/;
+ln -s /home/luism/Templates/dotfiles/.config/i3status /home/luism/.config/;
+ln -s /home/luism/Templates/dotfiles/.config/picom.conf /home/luism/.config/;
+ln -s /home/luism/Templates/dotfiles/.zshrc /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.dir_colors /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.nanorc /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.dmenurc /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.profile /home/luism/;
+ln -s /home/luism/Templates/dotfiles/.local/share/rofi/ /home/luism/.local/share/;
+ln -s /home/luism/Templates/dotfiles/.config/dunst /home/luism/.config/;
+ln -s /home/luism/Templates/dotfiles/.config/rofi /home/luism/.config/;
+ln -s /home/luism/Templates/dotfiles/.Xresources /home/luism/;
 
 # With sudo or ROOT
 
-ln -s /home/luism/dotfiles.config/i3/scripts/dmenu_recency /usr/bin/;
-ln -s /home/luism/dotfiles.config/i3/scripts/i3exit /usr/bin/;
-ln -s /home/luism/dotfiles.config/i3/scripts/i3-scrot /usr/bin/;
-ln -s /home/luism/dotfiles.config/i3/scripts/start_conky /usr/bin/;
-ln -s /home/luism/dotfiles.config/i3/scripts/ff-theme-util /usr/bin/;
-ln -s /home/luism/dotfiles.config/i3/scripts/blurlock /usr/bin/;
-ln -s /home/luism/dotfiles.config/i3/scripts/setcursor /usr/bin/;
-ln -s /home/luism/dotfiles/usr/share/conky/ /usr/share/;
-ln -s /home/luism/dotfiles/usr/share/nano-syntax-highlighting /usr/share/;
-ln -s /home/luism/dotfiles/usr/share/zsh/fedora-zsh-config /usr/share/zsh/;
-ln -s /home/luism/dotfiles/usr/share/zsh/fedora-zsh-prompt /usr/share/zsh/;
-ln -s /home/luism/dotfiles/usr/share/zsh/p10k.zsh /usr/share/zsh/;
-cp -r /home/luism/dotfiles/usr/share/fonts/TTF /usr/share/fonts;
-cp -r /home/luism/dotfiles/usr/share/fonts/Roboto /usr/share/fonts;
-cp -r /home/luism/dotfiles/usr/share/fonts/RobotoMono /usr/share/fonts;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/dmenu_recency /usr/bin/;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/i3exit /usr/bin/;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/i3-scrot /usr/bin/;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/start_conky /usr/bin/;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/ff-theme-util /usr/bin/;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/blurlock /usr/bin/;
+ln -s /home/luism/Templates/dotfiles.config/i3/scripts/setcursor /usr/bin/;
+ln -s /home/luism/Templates/dotfiles/usr/share/conky/ /usr/share/;
+ln -s /home/luism/Templates/dotfiles/usr/share/nano-syntax-highlighting /usr/share/;
+ln -s /home/luism/Templates/dotfiles/usr/share/zsh/fedora-zsh-config /usr/share/zsh/;
+ln -s /home/luism/Templates/dotfiles/usr/share/zsh/fedora-zsh-prompt /usr/share/zsh/;
+ln -s /home/luism/Templates/dotfiles/usr/share/zsh/p10k.zsh /usr/share/zsh/;
+cp -r /home/luism/Templates/dotfiles/usr/share/fonts/TTF /usr/share/fonts;
+cp -r /home/luism/Templates/dotfiles/usr/share/fonts/Roboto /usr/share/fonts;
+cp -r /home/luism/Templates/dotfiles/usr/share/fonts/RobotoMono /usr/share/fonts;
 
 # Plugin Neovim zsh-history-substring-search
 

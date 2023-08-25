@@ -1,8 +1,6 @@
 # i3 config file (v4)
 # Please see http://i3wm.org/docs/userguide.html for a complete reference! 
 
-
-
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
 set $mod Mod4 
 set $terminal xfce4-terminal
@@ -330,7 +328,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # Autostart applications
 #exec_always --no-startup-id workstyle  
 # Kill if already running
-exec feh --bg-scale --zoom fill ~/dotfiles/usr/share/Background/pxfuel.jpg
+exec feh --bg-scale --zoom fill ~/Templates/dotfiles/usr/share/Background/pxfuel.jpg
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
