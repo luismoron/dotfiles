@@ -1,2 +1,1 @@
-@import "fedora"
-
+@theme "/home/luism/.config/rofi/fedoradark.rasi"
