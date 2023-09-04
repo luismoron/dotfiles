@@ -163,9 +163,11 @@ alias remove='sudo dnf5 remove'
 alias installf='flatpak install'
 alias searchf='flatpak search'
 alias removef='flatpak remove'
-alias installs="sudo snap install"
-alias removes="sudo snap remove"
-
+alias ni3='nvim ~/.i3/config'
+alias nbash='nvim ~/.bashrc'
+alias nzsh='nvim ~/.zshrc'
+alias rbash='source ~/.bashrc'
+alias rzsh='source ~/.zshrc'
 
 PATH="$PATH":root/.local/bin:/snap/bin:/usr/sandbox/:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/share/games:/usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/var/lib/snapd/snap/bin:/opt/flutter/bin:/home/luism/.cargo/bin
 
@@ -265,11 +267,17 @@ export FLUTTER_HOME=/opt/flutter/
 export PATH=$FLUTTER_HOME/bin:$PATH
 
 #android home
-export ANDROID_HOME=/home/luism/Android/Sdk
-export PATH=$ANDROID_HOME/cmdline-tools:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
-export PATH=$ANDROID_HOME/platform-tools:$PATH
+#export ANDROID_HOME ~/Library/Android/sdk
+
+export ANDROID_HOME=/home/luism/Android/Sdk/
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+#export PATH=$ANDROID_HOME/cmdline-tools:$PATH
+#export PATH=$ANDROID_HOME/tools:$PATH
+#export PATH=$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
+#export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+#Java 
+#export JAVA_HOME=/opt/android-studio/lib/
 
 
 #android sdk root
