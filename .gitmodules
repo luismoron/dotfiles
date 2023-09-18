@@ -1,3 +1,6 @@
 [submodule "/home/luism/dotfiles/.config/ranger"]
 	path = /home/luism/dotfiles/.config/ranger
 	url = https://gitlab.manjaro.org/profiles-and-settings/manjaro-ranger-settings.git
+[submodule ".config/i3status/i3spotifystatus"]
+	path = .config/i3status/i3spotifystatus
+	url = https://github.com/rpieja/i3spotifystatus.git
