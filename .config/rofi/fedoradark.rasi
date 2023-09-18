@@ -18,7 +18,7 @@
     nord6:     #eceff4;
 
     nord7:     #8fbcbb;
-    nord8:     #16a085;
+    nord8:     #005577;
     nord9:     #81a1c1;
     nord10:    #5e81ac;
     nord11:    #bf616a;
@@ -61,7 +61,7 @@ prompt, entry, element-text, element-icon {
 }
 
 prompt {
-    text-color: @accent-color;
+    text-color: @nord4;
 }
 
 listview {
@@ -82,7 +82,7 @@ element normal active {
 }
 
 element selected {
-    text-color: @nord0;
+    text-color: @nord4;
 }
 
 element selected normal {
