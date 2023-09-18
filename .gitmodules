@@ -4,3 +4,6 @@
 [submodule ".config/i3status/i3spotifystatus"]
 	path = .config/i3status/i3spotifystatus
 	url = https://github.com/rpieja/i3spotifystatus.git
+[submodule "usr/share/themes"]
+	path = usr/share/themes
+	url = https://github.com/vinceliuice/Matcha-gtk-theme.git
