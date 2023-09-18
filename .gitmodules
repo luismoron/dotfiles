@@ -7,3 +7,6 @@
 [submodule "usr/share/themes"]
 	path = usr/share/themes
 	url = https://github.com/vinceliuice/Matcha-gtk-theme.git
+[submodule "usr/share/icons"]
+	path = usr/share/icons
+	url = https://github.com/yeyushengfan258/Win11-icon-theme.git
