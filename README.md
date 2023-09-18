@@ -9,8 +9,9 @@ max_parallel_downloads=10
 defaultyes=True
 keepcache=True
 
-sudo dnf groupinstall "development tools" -y;
 sudo dnf install dnf5 -y;
+sudo dnf groupinstall "development tools" -y;
+
 
 # OH-MY-BASH
 
@@ -33,19 +34,16 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 # Theme Matcha and Win11 icons 
 
-git clone https://github.com/vinceliuice/Matcha-gtk-theme.git;
-cd Matcha-gtk-theme;
+cd /home/luism/Templates/dotfiles/usr/share/themes/;
 ./install.sh -t azul;
-cd ~;
-git clone https://github.com/yeyushengfan258/Win11-icon-theme.git;
-cd Win11-icon-theme;
+cd /home/luism/Templates/dotfiles/usr/share/icons/;
 ./install.sh -blue;
 
 
 # Simbolyc Link
 
 rm -rf /home/luism/.config/i3;
-ln -s /home/luism/Templates/dotfiles/.config/i3 /home/luism/.config/;
+ln -s /home/luism/Templates/dotfiles/.config/i3 /home/luism/.config/.i3;
 ln -s /home/luism/Templates/dotfiles/.config/i3status /home/luism/.config/;
 ln -s /home/luism/Templates/dotfiles/.config/picom.conf /home/luism/.config/;
 ln -s /home/luism/Templates/dotfiles/.zshrc /home/luism/;
