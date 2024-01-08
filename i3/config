@@ -503,7 +503,7 @@ bar {
         binding_mode       #005577 #2C2C2C #F9FAF9
         urgent_workspace   #005577 #FDF6E3 #E5201D
     }
-  status_command i3status -c $HOME/Plantillas/dotfiles/i3/i3status/i3status.conf
+  status_command i3status -c $HOME/Plantillas/dotfiles/i3/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3/i3status/i3spotifystatus/pystatus.py
 }
 
 
