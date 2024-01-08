@@ -43,9 +43,11 @@ cd /home/luism/Templates/dotfiles/usr/share/icons/;
 # Simbolyc Link
 
 rm -rf /home/luism/.config/i3;
-ln -s /home/luis/Plantillas/dotfiles/i3 /home/luis/.i3
+ln -s /home/luis/Plantillas/dotfiles/i3 /home/luis/.i3;
+ln -s /home/luis/Plantillas/dotfiles/rofi /home/luis/.config;
+ln -s /home/luis/Plantillas/dotfiles/picom /home/luis/.config;
 
-ln -s /home/luism/Templates/dotfiles/.config/i3status /home/luism/.config/;
+
 ln -s /home/luism/Templates/dotfiles/.config/picom.conf /home/luism/.config/;
 ln -s /home/luism/Templates/dotfiles/.zshrc /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.dir_colors /home/luism/;
