@@ -12,19 +12,19 @@ keepcache=True
 sudo dnf install dnf5 -y;
 sudo dnf groupinstall "development tools" -y;
 
-
-# OH-MY-BASH
-
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
- 
-rm ~/.bashrc;
-ln -s /home/luism/Templates/dotfiles/.bashrc /home/luism/;
-update -y; 
-
 # PACKAGE TO INSTALL
 
-install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm -y;
-install scrot playerctl conky breeze-cursor-theme system-config-printer blueman cargo hplip rxvt-unicode light xfce4-power-manager nitrogen rofi polkit-gnome neovim lightdm-slick-greeter qt5ct lxappearance bat lsd file-roller picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver zsh-autosuggestions zsh zsh-syntax-highlighting xautolock udiskie sqlite unrar p7zip redshift thunar-media-tags-plugin thunar-vcs-plugin thunar-archive-plugin thunar-sendto-clamtk  readline-devel sqlite sqlite-devel openssl-devel -y;
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm;
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing;
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin;
+sudo dnf groupupdate sound-and-video;
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld;
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld;
+
+
+install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum light  rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver
+
+   readline-devel sqlite sqlite-devel openssl-devel -y;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
@@ -43,12 +43,12 @@ cd /home/luism/Templates/dotfiles/usr/share/icons/;
 # Simbolyc Link
 
 rm -rf /home/luism/.config/i3;
-ln -s /home/luism/Templates/dotfiles/.config/i3 /home/luism/.config/.i3;
+ln -s /home/luis/Plantillas/dotfiles/i3 /home/luis/.i3
+
 ln -s /home/luism/Templates/dotfiles/.config/i3status /home/luism/.config/;
 ln -s /home/luism/Templates/dotfiles/.config/picom.conf /home/luism/.config/;
 ln -s /home/luism/Templates/dotfiles/.zshrc /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.dir_colors /home/luism/;
-ln -s /home/luism/Templates/dotfiles/.nanorc /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.dmenurc /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.profile /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.local/share/rofi/ /home/luism/.local/share/;
@@ -58,12 +58,15 @@ ln -s /home/luism/Templates/dotfiles/.Xresources /home/luism/;
 
 # With sudo or ROOT
 
+ln -s /home/luis/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
+ln -s /home/luis/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
+ln -s /home/luis/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;2
+
+ln -s /home/luism/Templates/dotfiles/usr/bin/blurlock /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/bin/dmenu_recency /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/i3exit /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/bin/i3-scrot /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/bin/start_conky /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/bin/ff-theme-util /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/blurlock /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/bin/setcursor /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/share/conky/ /usr/share/;
 ln -s /home/luism/Templates/dotfiles/usr/share/nano-syntax-highlighting /usr/share/;
