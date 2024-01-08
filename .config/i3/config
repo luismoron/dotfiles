@@ -166,8 +166,8 @@ bindsym XF86AudioPrev exec playerctl previous
 
 
 # Brightness Control
-#bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-#bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
 
 # Screen Shooot
 bindsym $mod+Mod1+p exec --no-startup-id i3-scrot 
