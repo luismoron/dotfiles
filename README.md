@@ -32,24 +32,16 @@ install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Theme Matcha and Win11 icons 
-
-cd /home/luism/Templates/dotfiles/usr/share/themes/;
-./install.sh -t azul;
-cd /home/luism/Templates/dotfiles/usr/share/icons/;
-./install.sh -blue;
-
-
 # Simbolyc Link
 
 rm -rf /home/luism/.config/i3;
 ln -s /home/luis/Plantillas/dotfiles/i3 /home/luis/.i3;
 ln -s /home/luis/Plantillas/dotfiles/rofi /home/luis/.config;
 ln -s /home/luis/Plantillas/dotfiles/picom /home/luis/.config;
+ln -s /home/luis/Plantillas/dotfiles/dunst/ /home/luis/.config/
 
 
-ln -s /home/luism/Templates/dotfiles/.config/picom.conf /home/luism/.config/;
-ln -s /home/luism/Templates/dotfiles/.zshrc /home/luism/;
+
 ln -s /home/luism/Templates/dotfiles/.dir_colors /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.dmenurc /home/luism/;
 ln -s /home/luism/Templates/dotfiles/.profile /home/luism/;
@@ -62,7 +54,8 @@ ln -s /home/luism/Templates/dotfiles/.Xresources /home/luism/;
 
 ln -s /home/luis/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
 ln -s /home/luis/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/luis/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;2
+ln -s /home/luis/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;
+
 
 ln -s /home/luism/Templates/dotfiles/usr/bin/blurlock /usr/bin/;
 ln -s /home/luism/Templates/dotfiles/usr/bin/dmenu_recency /usr/bin/;
@@ -78,17 +71,6 @@ ln -s /home/luism/Templates/dotfiles/usr/share/zsh/p10k.zsh /usr/share/zsh/;
 cp -r /home/luism/Templates/dotfiles/usr/share/fonts/TTF /usr/share/fonts;
 cp -r /home/luism/Templates/dotfiles/usr/share/fonts/Roboto /usr/share/fonts;
 cp -r /home/luism/Templates/dotfiles/usr/share/fonts/RobotoMono /usr/share/fonts;
-
-# Plugin Neovim zsh-history-substring-search
-
-mkdir -p /usr/share/zsh/plugins;
-cd /usr/share/zsh/plugins;
-git clone https://github.com/zsh-users/zsh-history-substring-search;
-mkdir /usr/share/zsh/plugins/zsh-sudo;
-cd /usr/share/zsh/plugins/zsh-sudo;
-wget https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/sudo/sudo.plugin.zsh
-cd /usr/share;
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git /usr/share/zsh-theme-powerlevel10k
 
 # Neovim NVchad
 

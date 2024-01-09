@@ -116,13 +116,14 @@ bindsym $mod+Shift+r restart
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # Wlan Network Manager
 exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
 #exec --no-startup-id /usr/lib/polkit-1/polkitd
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id feh --bg-fill /usr/share/backgrounds/f39/default/f39-01-day.png
+exec --no-startup-id feh --bg-fill /usr/share/wallpapers/background.jpg
 
 
 ########################
