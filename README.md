@@ -32,51 +32,41 @@ install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+# Theme Matcha and Win11 icons 
+
+cd /home/luism/Templates/dotfiles/usr/share/themes/;
+./install.sh -t azul;
+cd /home/luism/Templates/dotfiles/usr/share/icons/;
+./install.sh -blue;
+
+
 # Simbolyc Link
 
-rm -rf /home/luism/.config/i3;
-ln -s /home/luis/Plantillas/dotfiles/i3 /home/luis/.i3;
-ln -s /home/luis/Plantillas/dotfiles/rofi /home/luis/.config;
-ln -s /home/luis/Plantillas/dotfiles/picom /home/luis/.config;
-ln -s /home/luis/Plantillas/dotfiles/dunst/ /home/luis/.config/
+rm -rf /home/$USER/.config/i3;
+ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.i3;
+ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config;
+ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config;
+ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
+ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config/;
+ln -s /home/$USER/Templates/dotfiles/.Xresources /home/$USER/;
 
-
-
-ln -s /home/luism/Templates/dotfiles/.dir_colors /home/luism/;
-ln -s /home/luism/Templates/dotfiles/.dmenurc /home/luism/;
-ln -s /home/luism/Templates/dotfiles/.profile /home/luism/;
-ln -s /home/luism/Templates/dotfiles/.local/share/rofi/ /home/luism/.local/share/;
-ln -s /home/luism/Templates/dotfiles/.config/dunst /home/luism/.config/;
-ln -s /home/luism/Templates/dotfiles/.config/rofi /home/luism/.config/;
-ln -s /home/luism/Templates/dotfiles/.Xresources /home/luism/;
+ln -s /home/$USER/Plantillas/dotfiles/.dir_colors /home/luism/;
+ln -s /home/$USER/Plantillas/dotfiles/.dmenurc /home/luism/;
+ln -s /home/$USER/Plantillas/dotfiles/.profile /home/luism/;
 
 # With sudo or ROOT
 
-ln -s /home/luis/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
-ln -s /home/luis/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/luis/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;
+ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
+ln -s /home/$USER/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
+ln -s /home/$USER/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;
+ln -s /home/$USER/Plantillas/dotfiles/usr/share/conky/ /usr/share/;
 
 
-ln -s /home/luism/Templates/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/dmenu_recency /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/i3-scrot /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/start_conky /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/ff-theme-util /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/bin/setcursor /usr/bin/;
-ln -s /home/luism/Templates/dotfiles/usr/share/conky/ /usr/share/;
-ln -s /home/luism/Templates/dotfiles/usr/share/nano-syntax-highlighting /usr/share/;
-ln -s /home/luism/Templates/dotfiles/usr/share/zsh/fedora-zsh-config /usr/share/zsh/;
-ln -s /home/luism/Templates/dotfiles/usr/share/zsh/fedora-zsh-prompt /usr/share/zsh/;
-ln -s /home/luism/Templates/dotfiles/usr/share/zsh/p10k.zsh /usr/share/zsh/;
-cp -r /home/luism/Templates/dotfiles/usr/share/fonts/TTF /usr/share/fonts;
-cp -r /home/luism/Templates/dotfiles/usr/share/fonts/Roboto /usr/share/fonts;
-cp -r /home/luism/Templates/dotfiles/usr/share/fonts/RobotoMono /usr/share/fonts;
+ln -s /home/$USER/Templates/dotfiles/usr/bin/dmenu_recency /usr/bin/;
+ln -s /home/$USER/Templates/dotfiles/usr/bin/i3-scrot /usr/bin/;
 
 # Neovim NVchad
 
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash;
-source ~/.bashrc;
-nvm install 18;
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 
 # Touch to click
