@@ -22,7 +22,7 @@ sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld;
 sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld;
 
 
-install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum light  rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom g++ clipit  xkill viewnior ninja cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver
+install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum light  rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom g++ clipit  xkill viewnior ninja-build cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver
 
    readline-devel sqlite sqlite-devel openssl-devel -y;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;

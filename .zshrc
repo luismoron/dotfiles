@@ -121,9 +121,9 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
-#alias update='sudo dnf distrosync -y'
-#alias install='sudo dnf install -y'
-#alias remove='sudo dnf remove -y'
+alias update='sudo dnf distrosync -y'
+alias install='sudo dnf install -y'
+alias remove='sudo dnf remove -y'
 alias rzsh='source ~/.zshrc'
 alias nzsh='nvim ~/.zshrc'
 alias ni3='nvim ~/.i3/config'
@@ -135,9 +135,9 @@ alias dp='docker ps'
 alias di='docker images'
 alias dp='docker pull'
 alias dv='docker volume'
-alias update='paru -Syu --noconfirm'
-alias install='paru -S --noconfirm'
-alias remove='paru -R --noconfirm'
+#alias update='paru -Syu --noconfirm'
+#alias install='paru -S --noconfirm'
+#alias remove='paru -R --noconfirm'
 
 
 #-------------------------------------------------------------
@@ -232,3 +232,6 @@ export PATH=$ANDROID_SDK_ROOT:$PATH
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Cargo Apps
+# export PATH=$HOME/.asdf/installs/rust/1.75.0/bin:$PATH
