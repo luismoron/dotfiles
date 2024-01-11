@@ -29,7 +29,7 @@ bindsym $mod+9 exec --no-startup-id blurlock
 
 # Set shut down, restart and locking features
 bindsym $mod+0 mode "$mode_system"
-set $mode_system Bloquear (l), Salir (e), Cambiar Usuario (u), Suspender (s), Hibernar (h), Reiniciar (r), Apagar (Shift+s)
+set $mode_system Press Keys To Lock (l) , Exit (e), Switch_User (u), Suspend (s), Hibernate (H), Reboot (r), Shutdown (Shift+s)
 mode "$mode_system" {
     bindsym l exec --no-startup-id blurlock, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
@@ -89,7 +89,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- blurlock --nofork
 
 ##############################
 ##  Reload Restar Desktop   ##
@@ -124,7 +124,7 @@ exec --no-startup-id clipit
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id volumeicon
+exec --no-startup-id blueman-applet
 
 ########################
 ##  shortcuts Apps    ##
@@ -139,7 +139,7 @@ bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
 bindsym F11 exec --no-startup-id i3-scrot
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
-bindsym $mod+Shift+w exec whatsapp 
+bindsym $mod+Shift+w exec whatsdesk 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+e exec thunar
@@ -152,10 +152,10 @@ bindsym $mod+Ctrl+m exec pavucontrol
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 
 # Media player controls to Music
@@ -165,8 +165,11 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Brightness Control
-bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
-bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+#bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
+#bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 
 # Screen Shooot
 bindsym $mod+Mod1+p exec --no-startup-id i3-scrot 
@@ -397,11 +400,9 @@ for_window [class="jetbrains-studio" window_type="splash" ] floating enable
 for_window [class="jetbrains-studio" title="Android Studio Setup Wizard"] floating enable
 for_window [class="jetbrains-studio" title="Import Android Studio Settings"] floating enable
 for_window [class="firefox" id=41943117 instance="Devtools"] floating enable
-for_window [title="Android Emulator - Pixel_2:5554"] floating enable
-for_window [class="Genymotion"] floating enable
 for_window [class="firefox"  instance="Places"] floating enable
 for_window [class="firefox"  instance="Devtools"] floating enable
-for_window [class="Gnome-disks"] floating enable
+for_window [class="whatsdesk" instance="whatsdesk" title="WhatsDesk" window_role="browser-window"] floating enable
 
 # switch to workspace with urgent window automatically
 
@@ -469,9 +470,9 @@ mode "resize" {
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #0f2235 #ffffff #0f2235 #FDF6E3
+  client.focused          #0f2235 #005577 #FFFFFF #FDF6E3
   client.focused_inactive #2F3D44 #ffffff #0f2235 #454948
-  client.unfocused        #2F3D44 #0f2235 #ffffff #454948
+  client.unfocused        #2F3D44 #0f2235 #c8a96f #454948
   client.urgent           #CB4B16 #FDF6E3 #0f2235 #268BD2
   client.placeholder      #000000 #0c0c0c #ffffff #000000 
 
@@ -498,7 +499,7 @@ bar {
         focused_workspace  #F9FAF9 #005577 #ffffff
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #005577 #2C2C2C #F9FAF9
+        binding_mode       #005577 #005577 #ffffff
         urgent_workspace   #005577 #FDF6E3 #E5201D
     }
   status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py

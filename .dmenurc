@@ -3,10 +3,10 @@
 #
 
 ## define the font for dmenu to be used
-DMENU_FN="victormono-10.5"
+DMENU_FN="Roboto-12"
 
-## background colour for unselected menu-items
-DMENU_NB="#222D31"
+## background colour for unselected menu-itemsDMENU_NB="#OF2232"
+DMENU_NB="#0F2232"
 
 ## textcolour for unselected menu-items
 DMENU_NF="#F9FAF9"
