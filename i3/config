@@ -403,6 +403,7 @@ for_window [class="firefox" id=41943117 instance="Devtools"] floating enable
 for_window [class="firefox"  instance="Places"] floating enable
 for_window [class="firefox"  instance="Devtools"] floating enable
 for_window [class="whatsdesk" instance="whatsdesk" title="WhatsDesk" window_role="browser-window"] floating enable
+for_window [class="Anydesk"] floating enable
 
 # switch to workspace with urgent window automatically
 
