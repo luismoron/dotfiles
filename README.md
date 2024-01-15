@@ -46,13 +46,13 @@ rm -rf /home/$USER/.config/i3;
 ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.i3;
 ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config;
-ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
 ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config/;
+ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
 ln -s /home/$USER/Templates/dotfiles/.Xresources /home/$USER/;
 
-ln -s /home/$USER/Plantillas/dotfiles/.dir_colors /home/luism/;
-ln -s /home/$USER/Plantillas/dotfiles/.dmenurc /home/luism/;
-ln -s /home/$USER/Plantillas/dotfiles/.profile /home/luism/;
+ln -s /home/$USER/Plantillas/dotfiles/.dir_colors /home/$USER/;
+ln -s /home/$USER/Plantillas/dotfiles/.dmenurc /home/$USER/;
+ln -s /home/$USER/Plantillas/dotfiles/.profile /home/$USER/;
 
 # With sudo or ROOT
 
@@ -60,10 +60,8 @@ ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/share/conky/ /usr/share/;
-
-
-ln -s /home/$USER/Templates/dotfiles/usr/bin/dmenu_recency /usr/bin/;
-ln -s /home/$USER/Templates/dotfiles/usr/bin/i3-scrot /usr/bin/;
+ln -s /home/$USER/Plantillas/dotfiles/usr/bin/dmenu_recency /usr/bin/;
+ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
 
 # Neovim NVchad
 
