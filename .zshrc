@@ -70,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker dnf sudo asdf flutter)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker sudo asdf flutter)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -121,9 +121,9 @@ alias l='lsd --group-dirs=first'
 alias lla='lsd -lha --group-dirs=first'
 alias ls='lsd --group-dirs=first'
 alias cat='bat'
-alias update='sudo dnf distrosync -y'
-alias install='sudo dnf install -y'
-alias remove='sudo dnf remove -y'
+#alias update='sudo dnf distrosync -y'
+#alias install='sudo dnf install -y'
+#alias remove='sudo dnf remove -y'
 alias rzsh='source ~/.zshrc'
 alias nzsh='nvim ~/.zshrc'
 alias ni3='nvim ~/.i3/config'
@@ -135,9 +135,9 @@ alias dp='docker ps'
 alias di='docker images'
 alias dp='docker pull'
 alias dv='docker volume'
-#alias update='paru -Syu --noconfirm'
-#alias install='paru -S --noconfirm'
-#alias remove='paru -R --noconfirm'
+alias update='paru -Syu --noconfirm'
+alias install='paru -S --noconfirm'
+alias remove='paru -R --noconfirm'
 
 
 #-------------------------------------------------------------
@@ -217,7 +217,7 @@ alias zostatus='sudo systemctl status zerotier-one'
 #export PATH=$FLUTTER_HOME/bin:$PATH
 
 #android home
-export ANDROID_HOME=/home/luism/Android/Sdk
+export ANDROID_HOME=/home/luis/Android/Sdk
 export PATH=$ANDROID_HOME/cmdline-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
@@ -225,7 +225,7 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 
 #android sdk root
-export ANDROID_SDK_ROOT=/home/luism/Android/Sdk
+export ANDROID_SDK_ROOT=/home/luis/Android/Sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 
 #export PATH="${PATH}:$HOME/.i3/scripts/"
