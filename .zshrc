@@ -217,7 +217,7 @@ alias zostatus='sudo systemctl status zerotier-one'
 #export PATH=$FLUTTER_HOME/bin:$PATH
 
 #android home
-export ANDROID_HOME=/home/luis/Android/Sdk
+export ANDROID_HOME=/home/luism/Android/Sdk
 export PATH=$ANDROID_HOME/cmdline-tools:$PATH
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/cmdline-tools/latest/bin/:$PATH
@@ -225,7 +225,7 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 
 
 #android sdk root
-export ANDROID_SDK_ROOT=/home/luis/Android/Sdk
+export ANDROID_SDK_ROOT=/home/luism/Android/Sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 
 #export PATH="${PATH}:$HOME/.i3/scripts/"

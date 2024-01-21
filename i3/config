@@ -49,7 +49,7 @@ mode "$mode_system" {
 ##########################
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2232' -sb '#005577' -sf '#EEEEEE' -fn 'Roboto-12'"
+bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2232' -sb '#005577' -sf '#EEEEEE' -fn 'Roboto-11'"
 
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 
@@ -125,7 +125,7 @@ exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id blueman-applet
-exec --no-startup-id pa-notify
+#exec --no-startup-id pa-notify
 
 ########################
 ##  shortcuts Apps    ##
@@ -494,7 +494,7 @@ bindsym $mod+m bar mode toggle
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    font xft:URWGothic-Book 12
+    font xft:URWGothic-Book 11
     colors {
         background #0f2235
         statusline #F9FAF9
