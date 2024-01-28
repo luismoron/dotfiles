@@ -49,7 +49,7 @@ mode "$mode_system" {
 ##########################
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2232' -sb '#005577' -sf '#EEEEEE' -fn 'Roboto-11'"
+bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2232' -sb '#005577' -sf '#EEEEEE' -fn 'Roboto-10'"
 
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 
@@ -408,6 +408,7 @@ for_window [class="firefox"  instance="Places"] floating enable
 for_window [class="firefox"  instance="Devtools"] floating enable
 for_window [class="whatsdesk" instance="whatsdesk" title="WhatsDesk" window_role="browser-window"] floating enable
 for_window [class="Anydesk"] floating enable
+for_window [class="Whatsapp-for-linux" instance="whatsapp-for-linux" title="WhatsApp para Linux"] floating enable
 
 # switch to workspace with urgent window automatically
 
