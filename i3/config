@@ -19,7 +19,10 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Shift+Return exec xfce4-terminal
+
+# Start terminal --drop-down
+bindsym $mod+Return exec xfce4-terminal --drop-down 
 
 # kill focused window
 bindsym $mod+q kill
@@ -49,7 +52,7 @@ mode "$mode_system" {
 ##########################
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2232' -sb '#005577' -sf '#EEEEEE' -fn 'Roboto-10'"
+bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2232' -sb '#005577' -sf '#EEEEEE' -fn 'Roboto-12'"
 
 #bindsym $mod+d exec --no-startup-id dmenu_recency
 
@@ -120,7 +123,7 @@ exec --no-startup-id pa-applet
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id nitrogen --restore
