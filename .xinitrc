@@ -4,15 +4,17 @@
 #
 # Executed by startx (run your window manager from here)
 
-startx -- /usr/bin/Xephyr :1
-Xephyr -br -ac -noreset -screen 1280x800 :1 &
-DISPLAY=:1 i3
+#startx -- /usr/bin/Xephyr :1
+#Xephyr -br -ac -noreset -screen 1280x800 :1 &
+#DISPLAY=:1 i3
 
+
+feh --bg-fill /usr/share/backgrounds/default.png
 
 userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
+#usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
+#sysmodmap=/etc/X11/xinit/.Xmodmap
 
 #DEFAULT_SESSION='i3 --shmlog-size 0'
 
