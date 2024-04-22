@@ -19,10 +19,10 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec xfce4-terminal
+bindsym $mod+Shift+Return exec --no-startup-id  xfce4-terminal
 
 # Start terminal --drop-down
-bindsym $mod+Return exec xfce4-terminal --drop-down 
+bindsym $mod+Return exec --no-startup-id  xfce4-terminal --drop-down 
 
 # kill focused window
 bindsym $mod+q kill
@@ -118,10 +118,10 @@ bindsym $mod+Shift+r restart
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # Wlan Network Manager
-#exec --no-startup-id pkill picom
+exec --no-startup-id pkill picom
 exec --no-startup-id nm-applet
 #exec --no-startup-id pa-applet
-#exec --no-startup-id sleep 1; picom --daemon
+exec --no-startup-id sleep 1; picom --daemon
 #exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -145,7 +145,7 @@ bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dun
 bindsym $mod+Shift+w exec whatsdesk 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
-bindsym $mod+Shift+e exec pcmanfm
+bindsym $mod+Shift+e exec thunar
 
 # screenShot
 bindsym F11 exec --no-startup-id i3-scrot
