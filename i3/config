@@ -130,6 +130,8 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 #exec --no-startup-id nitrogen --restore
 exec --no-startup-id blueman-applet
 #exec --no-startup-id pa-notify
+exec --no-startup-id feh --bg-scale /usr/share/backgrounds/archlinux/wave.png
+
 
 ########################
 ##  shortcuts Apps    ##
@@ -413,6 +415,7 @@ for_window [class="firefox"  instance="Devtools"] floating enable
 for_window [class="whatsdesk" instance="whatsdesk" title="WhatsDesk" window_role="browser-window"] floating enable
 for_window [class="Anydesk"] floating enable
 for_window [class="Whatsapp-for-linux" instance="whatsapp-for-linux" title="WhatsApp para Linux"] floating enable
+for_window [class="bruno" instance="bruno" title="bruno" window_role="browser-window"] floating enable
 
 # switch to workspace with urgent window automatically
 
