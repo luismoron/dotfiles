@@ -4,7 +4,7 @@
 
 #nano /etc/dnf/dnf.conf
 
-fastestmirror=True
+#fastestmirror=True
 max_parallel_downloads=10
 defaultyes=True
 keepcache=True
@@ -22,9 +22,8 @@ sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld;
 sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld;
 
 
-install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum light  rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom g++ clipit  xkill viewnior ninja-build cmake gtk3-devel clang gtk-murrine-engine gtk2-engines xclip xarchiver
+install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom clipit xkill viewnior ninja-build cmake  clang  xclip xarchiver
 
-   readline-devel sqlite sqlite-devel openssl-devel -y;
 sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
 install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
 
@@ -48,19 +47,11 @@ ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config/;
 ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
-ln -s /home/$USER/Templates/dotfiles/.Xresources /home/$USER/;
-
-ln -s /home/$USER/Plantillas/dotfiles/.dir_colors /home/$USER/;
-ln -s /home/$USER/Plantillas/dotfiles/.dmenurc /home/$USER/;
-ln -s /home/$USER/Plantillas/dotfiles/.profile /home/$USER/;
 
 # With sudo or ROOT
 
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/$USER/Plantillas/dotfiles/usr/bin/start_conky /usr/bin/;
-ln -s /home/$USER/Plantillas/dotfiles/usr/share/conky/ /usr/share/;
-ln -s /home/$USER/Plantillas/dotfiles/usr/bin/dmenu_recency /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
 
 # Neovim NVchad
