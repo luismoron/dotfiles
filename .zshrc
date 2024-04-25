@@ -134,9 +134,9 @@ alias dp='docker pull'
 alias dv='docker volume'
 alias ngtk4='nvim /home/luism/.config/gtk-4.0/settings.ini'
 alias ngtk='nvim /home/luism/.gtkrc-2.0'
-alias update='paru -Syu --noconfirm'
-alias install='paru -S --noconfirm '
-alias remove='paru -R --noconfirm'
+alias update='sudo dnf distro-sync -y'
+alias install='sudo dnf install -y'
+alias remove='sudo dnf remove -y'
 
 #-------------------------------------------------------------
 # Git Alias Commands
