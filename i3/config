@@ -418,6 +418,7 @@ for_window [class="Whatsapp-for-linux" instance="whatsapp-for-linux" title="What
 for_window [class="bruno" instance="bruno" title="bruno" window_role="browser-window"] floating enable
 for_window [class="transmission" instance="transmission-qt" title="Transmission"] floating enable
 for_window [class="jetbrains-studio" id=69206082 instance="jetbrains-studio" title=" "] floating enable
+for_window [class="Google-chrome" instance="127.0.0.1" title="Codeium Chat" window_role="pop-up"] floating enable
 
 # switch to workspace with urgent window automatically
 
