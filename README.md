@@ -47,9 +47,11 @@ ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config/;
 ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
+ln -s /home/$USER/Plantillas/dotfiles/.zprofile /home/$USER/;
 
 # With sudo or ROOT
 
+cp /home/luism/Plantillas/dotfiles/etc/X11/30-touchpad.conf /etc/X11/xorg.conf.d/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
 ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
@@ -61,13 +63,7 @@ git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 # Touch to click
 
 nano /etc/X11/xorg.conf.d/30-touchpad.conf
-Section "InputClass"
-    Identifier "touchpad"
-    Driver "libinput"
-    MatchIsTouchpad "on"
-    Option "Tapping" "on"
-    Option "TappingButtonMap" "lmr"
-EndSection
+
 
 # Verifications web Browser 
 
