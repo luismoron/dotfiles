@@ -52,9 +52,9 @@ ln -s /home/$USER/Plantillas/dotfiles/.zprofile /home/$USER/;
 # With sudo or ROOT
 
 cp /home/luism/Plantillas/dotfiles/etc/X11/30-touchpad.conf /etc/X11/xorg.conf.d/;
-ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
-ln -s /home/$USER/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/$USER/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
 
 # Neovim NVchad
 

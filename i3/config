@@ -486,7 +486,8 @@ mode "resize" {
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-  client.focused          #0f2235 #005577 #FFFFFF #FDF6E3
+  client.focused          #83CAFA #51A2DA #FFFFFF #83CAFA   #51A2DA
+# client.focused          #0f2235 #005577 #FFFFFF #FDF6E3
   client.focused_inactive #2F3D44 #ffffff #0f2235 #454948
   client.unfocused        #2F3D44 #0f2235 #595b5b #454948
   client.urgent           #CB4B16 #FDF6E3 #0f2235 #268BD2
@@ -512,10 +513,10 @@ bar {
         separator  #454947
 
 #                      border  backgr. text
-        focused_workspace  #F9FAF9 #005577 #ffffff
+        focused_workspace  #53CAFA #51A2DA #ffffff
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #005577 #005577 #ffffff
+        binding_mode       #53CAFA #005577 #ffffff
         urgent_workspace   #005577 #FDF6E3 #E5201D
     }
   status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
