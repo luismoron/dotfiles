@@ -130,6 +130,7 @@ exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id blueman-applet
 #exec --no-startup-id pa-notify
+exec_always --no-startup-id workstyle
 
 
 ########################
@@ -143,7 +144,7 @@ bindsym $mod+F3 exec geary
 bindsym $mod+t exec --no-startup-id pkill picom 
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
-bindsym $mod+Shift+w exec whatsdesk 
+bindsym $mod+Shift+w exec whatsapp 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+e exec thunar
