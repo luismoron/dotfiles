@@ -8,7 +8,7 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-exec --no-startup-id systemctl start --user i3-session.service
+exec --no-startup-id systemctl start --user workstyle.service
 
 #####################
 ##  Defaults keys  ##
