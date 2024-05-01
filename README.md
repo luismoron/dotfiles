@@ -15,11 +15,11 @@ sudo dnf groupinstall "development tools" -y;
 # PACKAGE TO INSTALL
 
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm;
-sudo dnf swap ffmpeg-free ffmpeg --allowerasing;
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin;
-sudo dnf groupupdate sound-and-video;
-sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld;
-sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld;
+sudo dnf swap ffmpeg-free ffmpeg --allowerasing -y;
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin -y;
+sudo dnf groupupdate sound-and-video -y;
+sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y;
+sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y;
 
 
 install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom clipit xkill viewnior ninja-build cmake  clang  xclip xarchiver
@@ -48,6 +48,7 @@ ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config/;
 ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
 ln -s /home/$USER/Plantillas/dotfiles/.zprofile /home/$USER/;
+ln -s /home/luism/Plantillas/dotfiles/.config/systemd /home/luism/.config
 
 # With sudo or ROOT
 

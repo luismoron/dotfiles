@@ -173,7 +173,7 @@ alias gc="git commit"
 alias gd="git diff"
 alias gk="gitk --all&"
 alias gx="gitx --all"
-alias ncargo="nvim ~/.config/workstyle/config.toml "
+alias nwor="nvim ~/.config/workstyle/config.toml "
 
 # show ignored files by git
 alias gx="ign = ls-files -o -i --exclude-standard"
