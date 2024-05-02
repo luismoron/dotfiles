@@ -61,11 +61,6 @@ ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
 
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
 
-# Touch to click
-
-nano /etc/X11/xorg.conf.d/30-touchpad.conf
-
-
 # Verifications web Browser 
 
 xdg-settings get default-web-browser
