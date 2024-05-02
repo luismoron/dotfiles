@@ -48,6 +48,8 @@
 "youtube"="󰗃"
 "blueman-manager"="󰥰"
 "jetbrains-studio"="󰀴"
+"react native"=""
+"docker"="󰡨"
 
 [other]
 fallback_icon = "🤨"
