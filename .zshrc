@@ -111,9 +111,6 @@ fpath=(${ASDF_DIR}/completions $fpath)
 # initialise completions with ZSH's compinit
 autoload -Uz compinit && compinit
 
-
-
-
 # Manual aliases
 alias ll='lsd -lh --group-dirs=first'
 alias la='lsd -a --group-dirs=first'
@@ -134,9 +131,13 @@ alias dp='docker pull'
 alias dv='docker volume'
 alias ngtk4='nvim /home/luism/.config/gtk-4.0/settings.ini'
 alias ngtk='nvim /home/luism/.gtkrc-2.0'
-alias update='sudo dnf update -y'
-alias install='sudo dnf install -y'
-alias remove='sudo dnf remove -y'
+alias upd='sudo dnf update -y'
+alias int='sudo dnf install -y'
+alias rmv='sudo dnf remove -y'
+alias dsh='sudo dnf search -y'
+alias intf='flatpak install -y'
+alias rmvt='flatpak uninstall -y'
+alias fsh='flatpak search'
 
 #-------------------------------------------------------------
 # Git Alias Commands
