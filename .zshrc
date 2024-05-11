@@ -138,6 +138,7 @@ alias dsh='sudo dnf search -y'
 alias intf='flatpak install -y'
 alias rmvt='flatpak uninstall -y'
 alias fsh='flatpak search'
+alias wails='asdf exec wails'
 
 #-------------------------------------------------------------
 # Git Alias Commands

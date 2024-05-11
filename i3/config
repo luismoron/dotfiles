@@ -120,6 +120,7 @@ bindsym $mod+Shift+r restart
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # Wlan Network Manager
 exec --no-startup-id pkill picom
+exec_always --no-startup-id onedrive --synchronize
 exec --no-startup-id pkill volumeicon
 exec --no-startup-id volumeicon
 exec --no-startup-id nm-applet
