@@ -20,7 +20,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec --no-startup-id  alacritty
+bindsym $mod+Shift+Return exec --no-startup-id  xfce4-terminal
 
 # Start terminal --drop-down
 bindsym $mod+Return exec --no-startup-id  xfce4-terminal --drop-down 
@@ -121,17 +121,15 @@ bindsym $mod+Shift+r restart
 # Wlan Network Manager
 exec --no-startup-id pkill picom
 exec_always --no-startup-id onedrive --synchronize
-exec --no-startup-id pkill volumeicon
-exec --no-startup-id volumeicon
+exec --no-startup-id exec volumeicon
 exec --no-startup-id nm-applet
 #exec --no-startup-id pa-applet
 exec --no-startup-id sleep 1; picom --daemon
 #exec --no-startup-id start_conky --daemonize
-exec --no-startup-id clipit
+exec --no-startup-id parcellite
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id nitrogen --restore
 exec --no-startup-id blueman-applet
 #exec --no-startup-id pa-notify
 #exec_always --no-startup-id workstyle
