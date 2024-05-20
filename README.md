@@ -24,9 +24,6 @@ sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y;
 
 install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom clipit xkill viewnior ninja-build cmake  clang  xclip xarchiver
 
-sudo dnf config-manager --add-repo https://download.docker.com/linux/fedora/docker-ce.repo;
-install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y;
-
 # Flathub Repo
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
