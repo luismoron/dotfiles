@@ -8,6 +8,8 @@
 #
 # Note if multiple patterns are present in the same application name,
 # precedence is given in order of apparition in this file.
+
+theme = "default"
 "spotify" = "󰓇 "
 "alacritty" = " "
 "xfce4-terminal" = " "
@@ -31,7 +33,7 @@
 "pcmanfm" = " "
 "thunar" = " "
 "libreoffice" = ""
-"nvim" = " "
+"nvim " = " "
 "neovim"=" "
 "telegram" = " "
 "org.gnome.Software"="󰊬"
@@ -52,6 +54,7 @@
 "react native"=""
 "docker"="󰡨"
 "file-roller" =''
+"kvantum"="󰰊"
 
 [other]
 fallback_icon = "🤨"

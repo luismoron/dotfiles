@@ -146,7 +146,7 @@ bindsym $mod+F3 exec geary
 bindsym $mod+t exec --no-startup-id pkill picom 
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
-bindsym $mod+Shift+w exec whatsdesk 
+bindsym $mod+Shift+w exec whatsapp 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+e exec thunar
@@ -422,6 +422,7 @@ for_window [class="bruno" instance="bruno" title="bruno" window_role="browser-wi
 for_window [class="transmission" instance="transmission-qt" title="Transmission"] floating enable
 for_window [class="jetbrains-studio" id=69206082 instance="jetbrains-studio" title=" "] floating enable
 for_window [class="Google-chrome" instance="127.0.0.1" title="Codeium Chat" window_role="pop-up"] floating enable
+for_window [class="MANGO-dev-linux-amd64" ] floating enable
 
 # switch to workspace with urgent window automatically
 
