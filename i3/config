@@ -125,14 +125,15 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id pa-applet
 exec --no-startup-id sleep 1; picom --daemon
 #exec --no-startup-id start_conky --daemonize
-exec --no-startup-id clipit
-#exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id parcellite
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id xdg-user-dirs-update
-exec --no-startup-id xautolock -time 10 -locker blurlock
+#exec --no-startup-id xautolock -time 10 -locker blurlock
 exec --no-startup-id blueman-applet
 exec --no-startup-id firewall-applet
 #exec --no-startup-id pa-notify
 exec_always --no-startup-id workstyle
+exec --no-startup-id pa-applet
 
 
 ########################
@@ -146,7 +147,7 @@ bindsym $mod+F3 exec geary
 bindsym $mod+t exec --no-startup-id pkill picom 
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
-bindsym $mod+Shift+w exec whatsapp 
+bindsym $mod+Shift+w exec whatsdesk 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+e exec thunar
@@ -164,7 +165,7 @@ bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 ##  Multimedia keys   ##
 ########################
 
-bindsym $mod+Ctrl+m exec pavucontrol
+bindsym $mod+Ctrl+m exec pavucontrol-qt
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -319,7 +320,7 @@ smart_gaps on
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
-
+default_border pixel 4
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
@@ -423,7 +424,8 @@ for_window [class="transmission" instance="transmission-qt" title="Transmission"
 for_window [class="jetbrains-studio" id=69206082 instance="jetbrains-studio" title=" "] floating enable
 for_window [class="Google-chrome" instance="127.0.0.1" title="Codeium Chat" window_role="pop-up"] floating enable
 for_window [class="MANGO-dev-linux-amd64" ] floating enable
-
+for_window [class="YouTube Music"] floating enable
+ 
 # switch to workspace with urgent window automatically
 
 for_window [urgent=latest] focus
@@ -512,15 +514,16 @@ bindsym $mod+m bar mode toggle
 bar {
     font xft:Roboto 11
     colors {
-        background #0f2235
+        #background #0f2235
+	background #00244c
         statusline #F9FAF9
         separator  #454947
 
 #                      border  backgr. text
-        focused_workspace  #53CAFA #51A2DA #ffffff
+        focused_workspace  #53CAFA #005296 #ffffff
         active_workspace   #595B5B #353836 #FDF6E3
         inactive_workspace #595B5B #222D31 #EEE8D5
-        binding_mode       #53CAFA #005577 #ffffff
+        binding_mode       #53CAFA #005296 #ffffff
         urgent_workspace   #005577 #FDF6E3 #E5201D
     }
   status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
