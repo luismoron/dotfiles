@@ -55,6 +55,7 @@ theme = "default"
 "docker"="󰡨"
 "file-roller" =''
 "kvantum"="󰰊"
+"vmware"=""
 
 [other]
 fallback_icon = "🤨"
