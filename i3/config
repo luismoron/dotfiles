@@ -123,7 +123,7 @@ exec --no-startup-id pkill picom
 exec_always --no-startup-id onedrive --synchronize
 exec --no-startup-id nm-applet
 exec --no-startup-id pa-applet
-#exec --no-startup-id sleep 1; picom --daemon
+exec --no-startup-id sleep 1; picom --daemon
 #exec --no-startup-id start_conky --daemonize
 exec --no-startup-id parcellite
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -365,6 +365,7 @@ mode "$mode_gaps_outer" {
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"]floating enable sticky enable
+for_window [title="WhatsApp"] floating enable
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="fpakman"] floating enable
@@ -384,8 +385,6 @@ for_window [class="Skype"] floating enable border normal
 for_window [class="Timeset-gui"] floating enable border normal
 for_window [class="(?i)virtualbox"] floating enable border normal
 for_window [class="Xfburn"] floating enable
-for_window [class="file-roller" instance="file-roller"] floating enable
-for_window [class="File-roller"] floating enable, border normal
 for_window [title="Kvantummanager"] floating enable
 for_window [instance="crx__jgeocpdicgmkeemopbanhokmhcgcflmi"] floating enable #Twitter
 for_window [instance="crx__eilembjdkfgodjkcjnpgpaenohkicgjd"] floating enable #Keeps Google
@@ -520,7 +519,7 @@ bar {
         #background #0f2235
 	      background #00244c
         #background #270e70
-        statusline #d5d2e2
+        statusline #fefefe
         separator  #454947
 
 #                      border  backgr. text
