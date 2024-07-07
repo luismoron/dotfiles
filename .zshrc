@@ -138,16 +138,6 @@ alias int='sudo pacman -S --noconfirm'
 alias upd='sudo pacman -Syu --noconfirm'
 alias rmv='sudo pacman -Rs --noconfirm'
 alias wails='asdf exec wails'
-#alias upd='sudo dnf update -y'
-#alias int='sudo dnf install -y'
-#alias rmv='sudo dnf remove -y'
-#alias dsh='sudo dnf search -y'
-#alias intf='flatpak install -y'
-#alias rmvt='flatpak uninstall -y'
-#alias fsh='flatpak search'
-#alias ints='sudo snap install'
-#alias rmvs='sudo snap uninstall'
-
 
 #-------------------------------------------------------------
 # Git Alias Commands
