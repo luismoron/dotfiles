@@ -515,6 +515,8 @@ bindsym $mod+m bar mode toggle
 # finds out, if available)
 bar {
     font xft:Roboto 11
+    status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
+    tray_output eDP
     colors {
         #background #0f2235
 	      background #00244c
@@ -535,7 +537,6 @@ bar {
         #inactive_workspace #595B5B #270E70 #EEE8D5
         #active_workspace   #595B5B #4235A8 #FDF6E3
     }
-  status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
 }
 
 
