@@ -22,7 +22,7 @@ sudo dnf swap mesa-va-drivers mesa-va-drivers-freeworld -y;
 sudo dnf swap mesa-vdpau-drivers mesa-vdpau-drivers-freeworld -y;
 
 
-install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom clipit xkill viewnior ninja-build cmake  clang  xclip xarchiver
+install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct kvantum rofi neovim polkit-gnome  lightdm-slick-greeter lxappearance picom clipit xkill viewnior ninja-build cmake  clang  xclip xarchiver thunar-archive-plugins thunar-volman thunar-media-tags
 
 # Flathub Repo
 
@@ -45,7 +45,11 @@ ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config;
 ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config/;
 ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER/;
 ln -s /home/$USER/Plantillas/dotfiles/.zprofile /home/$USER/;
-ln -s /home/luism/Plantillas/dotfiles/.config/systemd /home/luism/.config
+ln -s /home/$USER/Plantillas/dotfiles/.config/systemd /home/$USER/.config;
+ln -s /home/$USER/Plantillas/dotfiles/.screenlayout/ /home/$USER/;
+ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config/;
+
+
 
 # With sudo or ROOT
 
