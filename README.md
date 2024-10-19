@@ -37,7 +37,7 @@ cd /home/luism/Templates/dotfiles/usr/share/icons/;
 
 # Simbolyc Link
 
-rm -rf /home/$USER/.config/i3 <br>
+rm -rf /home/$USER/.config/i3  
 ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.i3 <br>
 ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config <br>
 ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config <br>
