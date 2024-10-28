@@ -150,7 +150,7 @@ bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dun
 bindsym $mod+Shift+w exec whatsdesk 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
-bindsym $mod+Shift+e exec pcmanfm
+bindsym $mod+Shift+e exec thunar
 
 # screenShot
 bindsym F11 exec --no-startup-id i3-scrot
