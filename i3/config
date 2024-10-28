@@ -9,6 +9,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id systemctl start --user workstyle.service
+exec_always --no-startup-id ~/.i3/scripts/monitor_detect.sh
 
 #####################
 ##  Defaults keys  ##
@@ -133,7 +134,6 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id firewall-applet
 exec --no-startup-id pa-notify
 exec_always --no-startup-id workstyle
-exec --no-startup-id volumeicon
 
 
 #######################
@@ -147,7 +147,6 @@ bindsym $mod+F3 exec geary
 bindsym $mod+t exec --no-startup-id pkill picom 
 bindsym $mod+Ctrl+t exec --no-startup-id picom -b
 bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
-bindsym $mod+Shift+w exec whatsdesk 
 bindsym $mod+shift+t exec telegram
 bindsym $mod+Shift+m exec spotify
 bindsym $mod+Shift+e exec thunar
@@ -365,7 +364,6 @@ mode "$mode_gaps_outer" {
 
 # Open specific applications in floating mode
 for_window [title="alsamixer"]floating enable sticky enable
-for_window [title="WhatsApp"] floating enable
 for_window [class="Clipgrab"] floating enable
 for_window [title="File Transfer*"] floating enable
 for_window [class="fpakman"] floating enable
@@ -391,7 +389,6 @@ for_window [instance="crx__eilembjdkfgodjkcjnpgpaenohkicgjd"] floating enable #K
 for_window [class="TeamViewer"] floating enable
 for_window [class="jdownloader"] floating enable
 for_window [class="dnfdragora"] floating enable
-for_window [class="whatsapp-desktop-linux"] floating enable
 for_window [class="Spotify"] floating enable sticky enable
 for_window [class="Blueman-manager"] floating enable
 for_window [class="FileZilla"] floating enable
@@ -417,7 +414,6 @@ for_window [class="firefox"  instance="Places"] floating enable
 for_window [class="firefox"  instance="Devtools"] floating enable
 for_window [class="whatsdesk" instance="whatsdesk" title="WhatsDesk" window_role="browser-window"] floating enable
 for_window [class="Anydesk"] floating enable
-for_window [class="Whatsapp-for-linux" instance="whatsapp-for-linux" title="WhatsApp para Linux"] floating enable
 for_window [class="bruno" instance="bruno" title="bruno" window_role="browser-window"] floating enable
 for_window [class="transmission" instance="transmission-qt" title="Transmission"] floating enable
 for_window [class="jetbrains-studio" id=69206082 instance="jetbrains-studio" title=" "] floating enable
