@@ -41,7 +41,7 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ #ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # You can also set it to another string to have that shown instead of the default red dots.
@@ -124,7 +124,7 @@ alias ni3='nvim ~/.i3/config'
 alias nhyp='nvim ~/.config/hypr/hyprland.conf'
 alias nkit='nvim ~/.config/kitty/kitty.conf'
 alias dstart='sudo systemctl start docker'
-alias dstop='sudo systemctl stop docker'
+alias dstop='sudo systemctl stop docker.socket'
 alias dp='docker ps'
 alias di='docker images'
 alias dp='docker pull'

@@ -46,7 +46,8 @@ ln -s /home/$USER/Plantillas/dotfiles/.zshrc /home/$USER
 ln -s /home/$USER/Plantillas/dotfiles/.zprofile /home/$USER 
 ln -s /home/$USER/Plantillas/dotfiles/.config/systemd /home/$USER/.config 
 ln -s /home/$USER/Plantillas/dotfiles/.screenlayout/ /home/$USER 
-ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config 
+ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config
+ln -s /home/$USER/Plantillas/dotfiles/usr/share/fonts /home/$USER/.local/share/
 
 
 

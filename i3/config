@@ -9,7 +9,6 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 exec --no-startup-id systemctl start --user workstyle.service
-exec_always --no-startup-id ~/.i3/scripts/monitor_detect.sh
 
 #####################
 ##  Defaults keys  ##
