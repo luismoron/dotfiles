@@ -70,7 +70,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting docker sudo asdf flutter)
+plugins=(git docker sudo asdf flutter zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -80,17 +80,17 @@ source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 #
-# export LANG=en_US.UTF-8
+ export LANG=es_VE.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+ if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+ export ARCHFLAGS="-arch x86_64"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -120,98 +120,11 @@ alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias rzsh='source ~/.zshrc'
 alias nzsh='nvim ~/.zshrc'
-alias ni3='nvim ~/.i3/config'
-alias nhyp='nvim ~/.config/hypr/hyprland.conf'
-alias nkit='nvim ~/.config/kitty/kitty.conf'
 alias dstart='sudo systemctl start docker'
 alias dstop='sudo systemctl stop docker.socket'
-alias dp='docker ps'
-alias di='docker images'
-alias dp='docker pull'
-alias dv='docker volume'
-alias ngtk4='nvim /home/luism/.config/gtk-4.0/settings.ini'
-alias ngtk='nvim /home/luism/.gtkrc-2.0'
-alias upd='sudo dnf update -y'
-alias int='sudo dnf install -y'
-alias rmv='sudo dnf remove -y'
-alias dsh='sudo dnf search -y'
-alias intf='flatpak install -y'
-alias rmvt='flatpak uninstall -y'
-alias fsh='flatpak search'
-alias ints='sudo snap install'
-alias rmvs='sudo snap uninstall'
-alias wails='asdf exec wails'
-
-#-------------------------------------------------------------
-# Git Alias Commands
-#-------------------------------------------------------------
-#
-alias g="git status"
-alias ga="git add"
-alias gaa="git add ."
-alias gau="git add -u"
-alias gr="git restore"
-alias grs="git restore --staged"
-alias gc="git commit -m"
-alias gca="git commit -am"
-alias gb="git branch"
-alias gbd="git branch -d"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gt="git stash"
-alias gta="git stash apply"
-alias gm="git merge"
-alias gr="git rebase"
-alias gl="git log --oneline --decorate --graph"
-alias glog="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-alias glga="git log --graph --oneline --all --decorate"
-alias gb="git branch"
-alias gs="git show"
-alias gd="diff --color --color-words --abbrev"
-alias gdc="git diff --cached"
-alias gbl="git blame"
-alias gps="git push"
-alias gpl="git pull"
-alias gb="git branch"
-alias gc="git commit"
-alias gd="git diff"
-alias gk="gitk --all&"
-alias gx="gitx --all"
-alias nwor="nvim ~/.config/workstyle/config.toml "
-
-# show ignored files by git
-alias gx="ign = ls-files -o -i --exclude-standard"
-
-# Untrack Files without deleting them
-alias grmc="git rm -r --cached"
-
-
-#-------------------------------------------------------------
-# Docker Alias Commands
-#-------------------------------------------------------------
-#
-
-alias dockerstart='sudo systemctl start docker'
-alias dockerstatus="sudo systemctl status docker"
-alias dockerstop='sudo systemctl stop docker.socket'
-alias dockerstop='sudo systemctl stop docker.socket'
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias di='docker images'
-alias dp='docker pull'
-alias dvl='docker volume ls'
-alias dvc='docker volume create'
-alias dvr='docker volume remove'
-
-
-#-------------------------------------------------------------
-# zerotier Alias Commands
-#-------------------------------------------------------------
-#
-
-alias zostart='sudo systemctl start zerotier-one'
-alias zostop='sudo systemctl stop zerotier-one'
-alias zostatus='sudo systemctl status zerotier-one'
+alias upd='paru -Syu --noconfirm'
+alias int='paru -Sy --noconfirm'
+alias rmv='paru -Rs --noconfirm'
 
 
 #flutter

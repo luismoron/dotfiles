@@ -28,6 +28,30 @@ install zsh pavucontrol scrot playerctl conky breeze-cursor-theme blueman qt5ct 
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
+#zsh 
+Install Oh my ZSH.
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+Install plugins.
+
+autosuggesions plugin
+
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+
+zsh-syntax-highlighting plugin
+
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+
+zsh-fast-syntax-highlighting plugin
+
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/fast-syntax-highlighting
+
+zsh-autocomplete plugin
+
+git clone --depth 1 -- https://github.com/marlonrichert/zsh-autocomplete.git $ZSH_CUSTOM/plugins/zsh-autocomplete
+
+
 # Theme Matcha and Win11 icons 
 
 cd /home/luism/Templates/dotfiles/usr/share/themes/;
@@ -55,8 +79,8 @@ ln -s /home/$USER/Plantillas/dotfiles/usr/share/fonts /home/$USER/.local/share/
 
 cp /home/luism/Plantillas/dotfiles/etc/X11/30-touchpad.conf /etc/X11/xorg.conf.d/;
 ln -s /home/luism/Plantillas/dotfiles/usr/bin/bspcolorpicker /usr/bin/color-picker;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/power-profiles /usr/bin/power-profiles;
 ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3wc.sh /usr/bin/i3wc;
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/power-profiles /usr/bin/power-profiles;
 ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
 ln -s /home/luism/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
 ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
