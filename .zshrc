@@ -122,14 +122,9 @@ alias rzsh='source ~/.zshrc'
 alias nzsh='nvim ~/.zshrc'
 alias dstart='sudo systemctl start docker'
 alias dstop='sudo systemctl stop docker.socket'
-alias upd='paru -Syu --noconfirm'
-alias int='paru -Sy --noconfirm'
-alias rmv='paru -Rs --noconfirm'
-
-
-#flutter
-#export FLUTTER_HOME=/home/luism/.asdf/installs/flutter/3.16.1-stable/
-#export PATH=$FLUTTER_HOME/bin:$PATH
+alias upd='sudo dnf distro-sync -y'
+alias int='sudo dnf install -y'
+alias rmv='sudo dnf remove -y'
 
 #android home
 export ANDROID_HOME=/home/luism/Android/Sdk
@@ -143,10 +138,6 @@ export PATH=$ANDROID_HOME/platform-tools:$PATH
 export ANDROID_SDK_ROOT=/home/luism/Android/Sdk
 export PATH=$ANDROID_SDK_ROOT:$PATH
 
-#export PATH="${PATH}:$HOME/.i3/scripts/"
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Cargo Apps
 # export PATH=$HOME/.asdf/installs/rust/1.75.0/bin:$PATH
