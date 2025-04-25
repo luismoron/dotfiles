@@ -1,17 +1,7 @@
-# i3dotfilesfedora
-I3 dotfiles to fedora desktop
+# i3 Dotfiles Cachy
+I3 dotfiles to Cachy OS desktop
 
-#nano /etc/dnf/dnf.conf
-
-#fastestmirror=True
-max_parallel_downloads=10
-defaultyes=True
-keepcache=True
-
-sudo dnf install dnf5 -y;
-sudo dnf groupinstall "development tools" -y;
-
-My dotfiles and config files to fedoraI3
+My dotfiles and config files to fedora Cachy
 
 # Links to User dotfiles
 rm -rf /home/$USER/.config/i3  
