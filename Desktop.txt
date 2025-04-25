@@ -1,0 +1,1 @@
+install i3 dmenu rofi i3lock xss-lock i3status clipit pcmanfm nitrogen lightdm lightdm-gtk-greeter conky lxappearance xfce4-terminal picom xorg-xwininfo blueman dunst pa-applet-git  xclip i3-scrot brightnessctl pavucontrol
