@@ -5,10 +5,13 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+#source /usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh
+#source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+#source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+#source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+#source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # You may need to manually set your language environment
 #
@@ -16,7 +19,7 @@ source /usr/share/cachyos-zsh-config/cachyos-config.zsh
 
 # Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
+   export EDITOR='nvim'
  else
    export EDITOR='nvim'
  fi
@@ -52,6 +55,7 @@ alias ls='lsd --group-dirs=first'
 alias cat='bat'
 alias rzsh='source ~/.zshrc'
 alias nzsh='nvim ~/.zshrc'
+alias ni3='nvim ~/.config/i3/config'
 alias dstart='sudo systemctl start docker'
 alias dstop='sudo systemctl stop docker.socket'
 alias upd='paru -Syu --noconfirm'
