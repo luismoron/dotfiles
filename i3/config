@@ -1,0 +1,281 @@
+# i3 config file (v4)
+# Más info: https://i3wm.org/docs/userguide.html
+
+#####################
+##  Autostart      ##
+#####################
+
+# Ejecutar al inicio
+# Servicios y aplicaciones al inicio
+exec --no-startup-id systemctl start --user workstyle.service
+exec --no-startup-id dex-autostart --autostart --environment i3
+exec --no-startup-id xss-lock --transfer-sleep-lock -- blurlock --nofork
+exec --no-startup-id pkill picom
+exec --no-startup-id nm-applet
+exec --no-startup-id pa-applet
+exec --no-startup-id sleep 1; picom --daemon
+exec --no-startup-id start_conky --daemonize
+exec --no-startup-id clipit
+exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id xdg-user-dirs-update
+exec --no-startup-id blueman-applet
+exec --no-startup-id firewall-applet
+exec --no-startup-id pa-notify
+exec_always --no-startup-id workstyle
+
+#####################
+##  Variables      ##
+#####################
+
+set $mod Mod4
+set $refresh_i3status killall -SIGUSR1 i3status
+
+# Workspaces
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+
+#####################
+##  Atajos básicos ##
+#####################
+
+floating_modifier $mod
+
+# Terminales
+bindsym $mod+Shift+Return exec --no-startup-id xfce4-terminal
+bindsym $mod+Return exec --no-startup-id xfce4-terminal --drop-down 
+
+# Menús
+bindsym $mod+d exec --no-startup-id "dmenu_run -nf '#F9FAF9' -nb '#0F2235' -sb '#005577' -sf '#FEFEFE' -fn 'Roboto 10'"
+bindsym $mod+Shift+d exec --no-startup-id rofi -show drun -show-icons
+
+# Ventanas
+bindsym $mod+q kill
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+bindsym $mod+space focus mode_toggle
+bindsym $mod+a focus parent
+
+# Bloqueo y apagado
+bindsym $mod+9 exec --no-startup-id blurlock
+bindsym $mod+0 mode "$mode_system"
+set $mode_system Press Keys To Lock (l), Exit (e), Switch_User (u), Suspend (s), Hibernate (h), Reboot (r), Shutdown (Shift+s)
+mode "$mode_system" {
+    bindsym l exec --no-startup-id blurlock, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym u exec --no-startup-id i3exit switch_user, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Recarga y reinicio de i3
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+#####################
+##  Navegación     ##
+#####################
+
+# Cambiar foco
+bindsym $mod+j focus left
+bindsym $mod+k focus down
+bindsym $mod+l focus up
+bindsym $mod+semicolon focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+# Mover ventanas
+bindsym $mod+Shift+j move left
+bindsym $mod+Shift+k move down
+bindsym $mod+Shift+l move up
+bindsym $mod+Shift+semicolon move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+# Dividir orientación
+bindsym $mod+h split h; exec notify-send 'tile horizontally'
+bindsym $mod+v split v; exec notify-send 'tile vertically'
+bindsym $mod+Shift+q split toggle
+
+# Workspaces
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+Shift+1 move container to workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Ctrl+Right workspace next
+bindsym $mod+Ctrl+Left workspace prev
+bindsym $mod+b workspace back_and_forth
+bindsym $mod+Shift+b move container to workspace number back_and_forth; workspace back_and_forth
+
+#####################
+##  Multimedia     ##
+#####################
+
+# Volumen
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# Reproductor multimedia
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
+# Brillo
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
+
+#####################
+##  Apps rápidas   ##
+#####################
+
+bindsym $mod+F2 exec firefox
+bindsym $mod+F3 exec geary
+bindsym $mod+t exec --no-startup-id pkill picom 
+bindsym $mod+Ctrl+t exec --no-startup-id picom -b
+bindsym $mod+Ctrl+d --release exec "killall dunst; exec notify-send 'restart dunst'" 
+bindsym $mod+Shift+t exec telegram
+bindsym $mod+Shift+m exec spotify
+bindsym $mod+Shift+e exec thunar
+
+# Capturas de pantalla
+bindsym F11 exec --no-startup-id i3-scrot
+bindsym $mod+Mod1+p exec --no-startup-id i3-scrot 
+bindsym $mod+Mod1+o exec --no-startup-id i3-scrot -dc 
+bindsym $mod+Mod1+l --release exec --no-startup-id i3-scrot -s 
+bindsym $mod+mod1+k --release exec --no-startup-id i3-scrot -sc
+bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+
+#####################
+##  Gaps y Bordes  ##
+#####################
+
+gaps inner 12
+gaps outer -2
+smart_gaps on
+smart_borders on
+default_border pixel 4
+default_border none
+default_floating_border normal
+hide_edge_borders none
+
+# Cambiar bordes
+bindsym $mod+u border none
+bindsym $mod+y border pixel 1
+bindsym $mod+n border normal
+
+#####################
+##  Modos extra    ##
+#####################
+
+# Redshift
+bindsym $mod+Ctrl+r mode "$mode_redshift"
+set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K
+set $kill_redshift pkill -9 redshift;
+mode "$mode_redshift" {
+    bindsym a exec --no-startup-id "$kill_redshift redshift -P -t 5000:4000", mode "default"
+    bindsym r exec --no-startup-id "$kill_redshift redshift -x", mode "default"
+    bindsym 2 exec --no-startup-id "$kill_redshift redshift -P -O 2500", mode "default"
+    bindsym 3 exec --no-startup-id "$kill_redshift redshift -P -O 3000", mode "default"
+    bindsym 4 exec --no-startup-id "$kill_redshift redshift -P -O 4000", mode "default"
+    bindsym 5 exec --no-startup-id "$kill_redshift redshift -P -O 5000", mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+# Gaps
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+bindsym $mod+Shift+g mode "$mode_gaps"
+mode "$mode_gaps" {
+    bindsym o mode "$mode_gaps_outer"
+    bindsym i mode "$mode_gaps_inner"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+mode "$mode_gaps_inner" {
+    bindsym plus gaps inner current plus 5
+    bindsym minus gaps inner current minus 5
+    bindsym 0 gaps inner current set 0
+    bindsym Shift+plus gaps inner all plus 5
+    bindsym Shift+minus gaps inner all minus 5
+    bindsym Shift+0 gaps inner all set 0
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+mode "$mode_gaps_outer" {
+    bindsym plus gaps outer current plus 5
+    bindsym minus gaps outer current minus 5
+    bindsym 0 gaps outer current set 0
+    bindsym Shift+plus gaps outer all plus 5
+    bindsym Shift+minus gaps outer all minus 5
+    bindsym Shift+0 gaps outer all set 0
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+#####################
+##  Floating rules ##
+#####################
+
+# (Aquí puedes dejar tus reglas for_window tal como las tienes, ya están bien organizadas)
+
+#####################
+##  Barra i3status ##
+#####################
+
+bar {
+    font xft:Roboto 11
+    status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
+    tray_output eDP
+    colors {
+        background #00244c
+        statusline #fefefe
+        separator  #454947
+        focused_workspace  #d5d2e2 #005296 #ffffff
+        active_workspace   #595B5B #353836 #FDF6E3
+        inactive_workspace #595B5B #00244c #EEE8D5
+        binding_mode       #d5d2e2 #005296 #ffffff
+        urgent_workspace   #005577 #FDF6E3 #E5201D
+    }
+}
+
+#####################
+##  Fuentes        ##
+#####################
+
+font xft:URWGothic-Book 11
+
+#####################
+##  Otros          ##
+#####################
+
+# Puedes agregar aquí otras configuraciones personalizadas
