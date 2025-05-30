@@ -7,7 +7,7 @@
 
 # Ejecutar al inicio
 # Servicios y aplicaciones al inicio
-exec --no-startup-id systemctl start --user workstyle.service
+#exec --no-startup-id systemctl start --user workstyle.service
 exec --no-startup-id dex-autostart --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- blurlock --nofork
 exec --no-startup-id pkill picom
@@ -16,13 +16,15 @@ exec --no-startup-id pa-applet
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
-exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id /usr/lib/polkit-1/polkitd
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id blueman-applet
 exec --no-startup-id firewall-applet
 exec --no-startup-id pa-notify
-exec_always --no-startup-id workstyle
-
+exec --no-startup-id pkill -f workstyle
+exec --no-startup-id workstyle 
+exec --no-startup-id dunstify 'i3 config loaded' -t 2000
+# Ejecutar al inicio de sesión
 #####################
 ##  Variables      ##
 #####################
@@ -254,7 +256,7 @@ mode "$mode_gaps_outer" {
 
 bar {
     font xft:Roboto 11
-    status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
+    status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py 
     tray_output eDP
     colors {
         background #00244c
