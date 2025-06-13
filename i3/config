@@ -20,7 +20,7 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Shift+Return exec --no-startup-id  xfce4-terminal
+bindsym $mod+Shift+Return exec --no-startup-id  alacritty
 
 # Start terminal --drop-down
 bindsym $mod+Return exec --no-startup-id  xfce4-terminal --drop-down 
