@@ -1,0 +1,13 @@
+[Scheme]
+Name=CachyOS Depths
+ColorForeground=#C6F9FC
+ColorBackground=#1A2F2F
+ColorCursor=#2FE6CB
+ColorSelection=#1D9B87
+
+# Paleta de 16 colores (ANSI)
+# El orden es crucial:
+# Negro, Rojo, Verde, Amarillo, Azul, Magenta, Cian, Blanco (colores "normales")
+# Negro Brillante, Rojo Brillante, Verde Brillante, Amarillo Brillante, Azul Brillante, Magenta Brillante, Cian Brillante, Blanco Brillante (colores "brillantes")
+
+ColorPalette=#1A2F2F;#FF5555;#1D9B87;#2FE6CB;#274242;#D67AEE;#2FE6CB;#C6F9FC;#274242;#FF5555;#50FA7B;#FFEEA9;#61AFEF;#BD93F9;#2FE6CB;#C6F9FC
