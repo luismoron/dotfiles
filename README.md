@@ -22,6 +22,17 @@ flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.f
 
 ## Temas: Matcha y Win11 Icons
 
+<!-- Este comando es para que las apps de flatpak tomen el tema actual instalado -->
+
+<details>
+<summary><strong>Aplicar temas GTK y de iconos a Flatpak</strong></summary>
+
+```sh
+sudo flatpak override --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro --filesystem=~/.themes:ro --env=GTK_THEME=Matcha-dark-azul --env=ICON_THEME=Win11-blue-dark
+```
+
+</details>
+
 <details>
 <summary><strong>Crear enlaces simbólicos (usuario)</strong></summary>
 
