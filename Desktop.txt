@@ -1,1 +1,0 @@
-install i3 rofi  xss-lock clipit  lxappearance  picom xwininfo blueman  xclip scrot brightnessctl 
