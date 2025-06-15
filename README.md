@@ -13,35 +13,42 @@ keepcache=True
 
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# Theme Matcha and Win11 icons 
+# Theme Matcha and Win11 icons
 
+<details>
+<summary><strong>Simbolyc Link</strong></summary>
 
-# Simbolyc Link
-
-rm -rf /home/$USER/.config/i3  
-ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.config/i3  
-ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config  
-ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config 
-ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config 
-ln -s /home/$USER/Plantillas/dotfiles/config/systemd /home/$USER/.config 
+```sh
+rm -rf /home/$USER/.config/i3
+ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.config/i3
+ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config
+ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config
+ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config
+ln -s /home/$USER/Plantillas/dotfiles/config/systemd /home/$USER/.config
 ln -s /home/$USER/Plantillas/dotfiles/screenlayout /home/$USER/.screenlayout
 ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config/
+ln -s /home/$USER/Plantillas/dotfiles/config/gtk-3.0/settings.ini /home/$USER/.config/gtk-3.0/
+ln -s /home/$USER/Plantillas/dotfiles/i3/scripts/monitor_detect.sh /usr/bin/dmonitor
+```
 
-# With sudo or ROOT
+</details>
 
-cp /home/luism/Plantillas/dotfiles/etc/X11/30-touchpad.conf /etc/X11/xorg.conf.d/;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/bspcolorpicker /usr/bin/color-picker;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3wc.sh /usr/bin/i3wc;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/power-profiles /usr/bin/power-profiles;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/;
+<details>
+<summary><strong>With sudo or ROOT</strong></summary>
 
-# Neovim NVchad
+```sh
+cp /home/luism/Plantillas/dotfiles/etc/X11/30-touchpad.conf /etc/X11/xorg.conf.d/
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/bspcolorpicker /usr/bin/color-picker
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3wc.sh /usr/bin/i3wc
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/power-profiles /usr/bin/power-profiles
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/
+```
 
-git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1 && nvim;
+</details>
 
-# Verifications web Browser 
+# Verifications web Browser
 
 xdg-settings get default-web-browser
 
