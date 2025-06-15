@@ -10,14 +10,16 @@ paru -S i3-scrot i3exit starship
 
 # Simbolyc Link
 
+```sh
 rm -rf /home/$USER/.config/i3
 rm -rf /home/$USER/.config/picom
 rm -rf /home/$USER/.config/rofi
 rm -rf /home/$USER/.config/dunst
 rm -rf /home/$USER/.profile
-rm -rf /home/$USER/.gtkr-2.0
-ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.config/i3  
-ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config  
+rm -rf /home/$USER/.gtkrc-2.0
+
+ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.config/i3
+ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config
 ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config
 ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config
 ln -s /home/$USER/Plantillas/dotfiles/config/systemd /home/$USER/.config
@@ -25,6 +27,7 @@ ln -s /home/$USER/Plantillas/dotfiles/screenlayout /home/$USER/.screenlayout
 ln -s /home/$USER/Plantillas/dotfiles/profile /home/$USER/.profile
 ln -s /home/$USER/Plantillas/dotfiles/gtkrc-2.0 /home/$USER/.gtkrc-2.0
 ln -s /home/$USER/Plantillas/dotfiles/xfce4 /home/$USER/.local/share/
+```
 
 # With sudo or ROOT
 
