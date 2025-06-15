@@ -39,7 +39,6 @@ end
 #alias to docker
 
 alias d='docker'
-alias dc='docker compose'
 alias dps='docker ps'
 alias dpsa='docker ps -a'
 alias di='docker images'
@@ -54,8 +53,8 @@ alias dnetwork='docker network'
 alias dvl='docker volume ls'
 alias dvlrm='docker volume rm'
 alias dvol='docker volume'
-alias dcu='docker-compose up -d'
-alias dcd='docker-compose down'
+alias dcu='docker compose up -d'
+alias dcd='docker compose down'
 alias dcrestart='docker-compose restart'
 alias dcdup='docker-compose down && docker-compose up -d'
 
