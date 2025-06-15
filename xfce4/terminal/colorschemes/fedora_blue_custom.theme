@@ -8,8 +8,3 @@ ColorSelectionBackground=#ffffff
 ColorPalette=
 #000000; #ff6600; #00cc66; #ffcc00; #007bff; #ff007f; #00ffff; #ffffff;
 #595959; #ff9933; #33cc66; #ffdd33; #3399ff; #ff33bb; #33ffff; #cccccc;
-/**
- * Paleta de colores utilizada para definir los estilos visuales de la aplicación.
- * Incluye una variedad de tonos que pueden ser aplicados a diferentes elementos de la interfaz
- * para mantener coherencia y atractivo visual en el diseño.
- */
