@@ -71,9 +71,15 @@ alias rfish='source ~/.config/fish/config.fish'
 alias cfish='code ~/.config/fish/config.fish'
 alias dstart='sudo systemctl start docker'
 alias dstop='sudo systemctl stop docker.socket'
-alias upd='paru -Syu --noconfirm'
-alias int='paru -S --noconfirm'
-alias rmv='paru -Rc --noconfirm'
+alias up='sudo dnf distro-sync -y'
+alias int='sudo dnf install -y'
+alias rmv='sudo dnf remove -y'
+alias up='sudo dnf update -y'
+alias upf='flatpak update -y'
+alias intf='flatpak install -y'
+alias rmvf='flatpak uninstall -y'
+alias fsh='flatpak search'
+
 
 # Add Android SDK to PATH
 set -gx ANDROID_HOME $HOME/Android/Sdk

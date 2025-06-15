@@ -58,6 +58,7 @@ ln -s /home/$USER/Plantillas/dotfiles/screenlayout /home/$USER/.screenlayout
 ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config/
 ln -s /home/$USER/Plantillas/dotfiles/config/gtk-3.0/settings.ini /home/$USER/.config/gtk-3.0/
 ln -s /home/$USER/Plantillas/dotfiles/i3/scripts/monitor_detect.sh /usr/bin/dmonitor
+ln -s /home/$USER/Plantillas/dotfiles/config/config.fish /home/$USER/.config/fish/
 ```
 
 </details>
