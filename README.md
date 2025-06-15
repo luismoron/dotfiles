@@ -2,7 +2,8 @@
 
 # Fast Repos
 
-# Nano /etc/dnf/dnf.conf
+> **Note:**  
+> Edit `/etc/dnf/dnf.conf` with nano to apply these settings.
 
 ```conf
 fastestmirror=True
