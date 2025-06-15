@@ -10,12 +10,6 @@ To copy these dotfiles to your system, run:
 git clone --depth 1 git@github.com:luismoron/dotfiles.git ~/Plantillas/dotfiles
 ```
 
-You can also copy the repository URL to your clipboard:
-
-```sh
-echo "git@github.com:luismoron/dotfiles.git" | xclip -selection clipboard
-```
-
 To quickly install required packages, copy and paste the following command:
 
 ```sh
