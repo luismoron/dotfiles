@@ -39,5 +39,11 @@ ln -s /home/$USER/Plantillas/dotfiles/xfce4 /home/$USER/.local/share/
 
 # With sudo or ROOT
 
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/bspcolorpicker /usr/bin/color-picker;
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3wc.sh /usr/bin/i3wc;
+## Create Symbolic Links as Root
+
+Use the following commands to create symbolic links. **Run as root or with `sudo`:**
+
+```sh
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/bspcolorpicker /usr/bin/color-picker
+ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3wc.sh /usr/bin/i3wc
+```
