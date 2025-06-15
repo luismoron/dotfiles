@@ -14,6 +14,14 @@ defaultyes=True              # Responde 'sí' por defecto
 keepcache=True               # Mantiene la caché de paquetes
 ```
 
+## Instalar Paquetes Esenciales
+
+Puedes instalar los siguientes paquetes ejecutando este comando:
+
+```sh
+sudo dnf install i3 rofi xss-lock clipit lxappearance picom xwininfo blueman xclip scrot brightnessctl
+```
+
 ## Agregar Repositorio Flathub
 
 ```sh
