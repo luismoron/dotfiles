@@ -236,8 +236,71 @@ mode "$mode_gaps_outer" {
 #-------------------------------------------------
 # VENTANAS FLOTANTES (for_window)
 #-------------------------------------------------
-# Aquí van todos tus for_window ... floating enable agrupados
-# (No se muestran aquí por espacio, pero colócalos juntos en esta sección)
+
+# Open specific applications in floating mode
+for_window [title="alsamixer"]floating enable sticky enable
+for_window [class="Clipgrab"] floating enable
+for_window [title="File Transfer*"] floating enable
+for_window [class="fpakman"] floating enable
+for_window [class="GParted"] floating enable border normal
+for_window [title="i3_help"] floating enable sticky enable border normal
+for_window [class="Lightdm-settings"] floating enable
+for_window [class="Lxappearance"] floating enable border normal
+for_window [title="MuseScore: Play Panel"] floating enable
+for_window [class="Nitrogen"] floating enable sticky enable border normal
+for_window [class="Oblogout"] fullscreen enable
+for_window [class="Pavucontrol"] floating enable
+for_window [class="Qtconfig-qt4"] floating enable border normal
+for_window [class="qt5ct"] floating enable sticky enable border normal
+for_window [class="Simple-scan"] floating enable border normal
+for_window [class="(?i)System-config-printer.py"] floating enable border normal
+for_window [class="Skype"] floating enable border normal
+for_window [class="Timeset-gui"] floating enable border normal
+for_window [class="(?i)virtualbox"] floating enable border normal
+for_window [class="Xfburn"] floating enable
+for_window [title="Kvantummanager"] floating enable
+for_window [instance="crx__jgeocpdicgmkeemopbanhokmhcgcflmi"] floating enable #Twitter
+for_window [instance="crx__eilembjdkfgodjkcjnpgpaenohkicgjd"] floating enable #Keeps Google
+for_window [class="TeamViewer"] floating enable
+for_window [class="jdownloader"] floating enable
+for_window [class="dnfdragora"] floating enable
+for_window [class="Spotify"] floating enable sticky enable
+for_window [class="Blueman-manager"] floating enable
+for_window [class="FileZilla"] floating enable
+for_window [class="com.github.tchx84.Flatseal"] floating enable
+for_window [class="Mailspring"] floating enable
+for_window [class="pgadmin4"] floating enable
+for_window [class="discord"] floating enable
+for_window [class="TelegramDesktop"] floating enable
+for_window [class="Postman"] floating enable
+for_window [class="MongoDB Compass"] floating enable
+for_window [class="org.gnome.Software"] floating enable
+for_window [class="zoom" instance="zoom.real"] floating enable
+for_window [class="NickvisionTubeConverter.GNOME"] floating enable
+for_window [class="gnome-calculator"] floating enable
+for_window [class="Geary"] floating enable
+for_window [class="GitHub Desktop"] floating enable
+for_window [class="Setroubleshoot"] floating enable
+for_window [class="jetbrains-studio" window_type="splash" ] floating enable
+for_window [class="jetbrains-studio" title="Android Studio Setup Wizard"] floating enable
+for_window [class="jetbrains-studio" title="Import Android Studio Settings"] floating enable
+for_window [class="firefox" id=41943117 instance="Devtools"] floating enable
+for_window [class="firefox"  instance="Places"] floating enable
+for_window [class="firefox"  instance="Devtools"] floating enable
+for_window [class="whatsdesk" instance="whatsdesk" title="WhatsDesk" window_role="browser-window"] floating enable
+for_window [class="Anydesk"] floating enable
+for_window [class="bruno" instance="bruno" title="bruno" window_role="browser-window"] floating enable
+for_window [class="transmission" instance="transmission-qt" title="Transmission"] floating enable
+for_window [class="jetbrains-studio" id=69206082 instance="jetbrains-studio" title=" "] floating enable
+for_window [class="Google-chrome" instance="127.0.0.1" title="Codeium Chat" window_role="pop-up"] floating enable
+for_window [class="MANGO-dev-linux-amd64" ] floating enable
+for_window [class="YouTube Music"] floating enable
+for_window [class="Protonvpn" instance="protonvpn" title="Proton VPN"] floating enable
+ 
+# switch to workspace with urgent window automatically
+
+for_window [urgent=latest] focus
+
 
 #-------------------------------------------------
 # ESTILOS Y TEMAS
