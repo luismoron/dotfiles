@@ -1,5 +1,7 @@
 # Dotfiles Personales
 
+Este repositorio contiene mis archivos de configuración personal (dotfiles) para entornos Linux. Incluye configuraciones optimizadas para gestores de ventanas, temas, scripts y utilidades que facilitan la personalización y automatización del sistema. Es útil para restaurar rápidamente mi entorno de trabajo o replicarlo en nuevas instalaciones.
+
 ## Configuración de Repositorios DNF para descarga mas rapidas
 
 > **Nota:**  
