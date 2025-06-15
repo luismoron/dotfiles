@@ -4,13 +4,13 @@
 
 # Nano /etc/dnf/dnf.conf
 
-\*\*```conf
+```conf
 fastestmirror=True
 max_parallel_downloads=10
 defaultyes=True
 keepcache=True
 
-````**
+```
 
 # Flathub Repo
 
@@ -32,7 +32,7 @@ ln -s /home/$USER/Plantillas/dotfiles/screenlayout /home/$USER/.screenlayout
 ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config/
 ln -s /home/$USER/Plantillas/dotfiles/config/gtk-3.0/settings.ini /home/$USER/.config/gtk-3.0/
 ln -s /home/$USER/Plantillas/dotfiles/i3/scripts/monitor_detect.sh /usr/bin/dmonitor
-````
+```
 
 </details>
 
