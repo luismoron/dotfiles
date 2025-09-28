@@ -8,10 +8,10 @@ Este repositorio contiene mis archivos de configuración personal (dotfiles) par
 > Edita `/etc/dnf/dnf.conf` con nano para aplicar estas configuraciones.
 
 ```conf
-fastestmirror=True           # Habilita el espejo más rápido
-max_parallel_downloads=10    # Descargas paralelas máximas
-defaultyes=True              # Responde 'sí' por defecto
-keepcache=True               # Mantiene la caché de paquetes
+fastestmirror=True
+max_parallel_downloads=10
+defaultyes=True
+keepcache=True
 ```
 
 ## Instalar Paquetes Esenciales
