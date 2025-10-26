@@ -1,101 +1,151 @@
-# Dotfiles Personales
+# Dotfiles personales
 
-Este repositorio contiene mis archivos de configuración personal (dotfiles) para entornos Linux. Incluye configuraciones optimizadas para gestores de ventanas, temas, scripts y utilidades que facilitan la personalización y automatización del sistema. Es útil para restaurar rápidamente mi entorno de trabajo o replicarlo en nuevas instalaciones.
+Repositorio con mis configuraciones (dotfiles) para entornos Linux. Está pensado para
+restaurar o replicar mi entorno de trabajo en nuevas instalaciones.
 
-## Configuración de Repositorios DNF para descarga mas rapidas
+## Tabla de contenido
 
-> **Nota:**  
-> Edita `/etc/dnf/dnf.conf` con nano para aplicar estas configuraciones.
+- [Descripción](#descripción)
+- [Requisitos](#requisitos)
+- [Instalación rápida](#instalación-rápida)
+- [Ejemplos útiles](#ejemplos-útiles)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Notas importantes](#notas-importantes)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
 
-```conf
-fastestmirror=True
-max_parallel_downloads=10
-defaultyes=True
-keepcache=True
+## Descripción
+
+Contiene configuraciones y scripts para:
+
+- i3, rofi, picom, dunst y otros componentes del entorno gráfico.
+- Temas GTK / iconos y ajustes para aplicaciones Flatpak.
+- Scripts de utilidad y binarios en `usr/bin`.
+
+Usa este repositorio como plantilla personal o fuente de referencia. Sustituye rutas con `$HOME` cuando corresponda.
+
+## Requisitos
+
+- Sistema Linux con DNF (o adapta los comandos a tu gestor de paquetes).
+- flatpak (opcional, para temas en apps sandboxed).
+
+## Instalación rápida
+
+Recomendación: revisa cada comando antes de ejecutarlo. Sustituye `/home/luism` por `$HOME` si lo vas a usar en otra cuenta.
+
+### Opción automática (recomendada)
+
+Ejecuta el script de instalación incluido:
+
+```sh
+./install.sh
 ```
 
-## Instalar Paquetes Esenciales
+Este script hace backup de tus configuraciones existentes y crea los enlaces simbólicos automáticamente.
 
-Puedes instalar los siguientes paquetes ejecutando este comando:
+### Instalación manual
+
+- Clona el repositorio (si no lo tienes local):
+
+```sh
+git clone <tu-repo> ~/Plantillas/dotfiles
+```
+
+- Crear enlaces simbólicos (usuario):
+
+```sh
+# Elimina config previa si es necesario
+rm -rf "$HOME/.config/i3"
+
+# Enlaza configuraciones
+ln -s "$HOME/Plantillas/dotfiles/i3" "$HOME/.config/i3"
+ln -s "$HOME/Plantillas/dotfiles/rofi" "$HOME/.config/rofi"
+ln -s "$HOME/Plantillas/dotfiles/picom" "$HOME/.config/picom"
+ln -s "$HOME/Plantillas/dotfiles/dunst" "$HOME/.config/dunst"
+ln -s "$HOME/Plantillas/dotfiles/ranger" "$HOME/.config/ranger"
+ln -s "$HOME/Plantillas/dotfiles/screenlayout" "$HOME/.screenlayout"
+ln -s "$HOME/Plantillas/dotfiles/config/config.fish" "$HOME/.config/fish/config.fish"
+```
+
+- Operaciones que requieren privilegios (con sudo):
+
+```sh
+# Copiar configuración del touchpad al sistema
+sudo cp "$HOME/Plantillas/dotfiles/etc/X11/30-touchpad.conf" /etc/X11/xorg.conf.d/
+
+# Enlaces para utilidades del sistema
+sudo ln -s "$HOME/Plantillas/dotfiles/usr/bin/i3wc.sh" /usr/bin/i3wc
+sudo ln -s "$HOME/Plantillas/dotfiles/usr/bin/power-profiles" /usr/bin/power-profiles
+# Añade más enlaces según necesites
+```
+
+## Ejemplos útiles
+
+Instalar paquetes (ejemplo para Fedora/DNF):
 
 ```sh
 sudo dnf install i3 rofi xss-lock clipit lxappearance picom xwininfo blueman xclip scrot brightnessctl
 ```
 
-## Agregar Repositorio Flathub
+Agregar Flathub:
 
 ```sh
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 ```
 
-## Temas: Matcha y Win11 Icons
-
-<!-- Este comando es para que las apps de flatpak tomen el tema actual instalado -->
-
-<details>
-<summary><strong>Aplicar temas GTK y de iconos a Flatpak</strong></summary>
+Aplicar tema GTK / iconos a aplicaciones Flatpak (ejemplo):
 
 ```sh
-sudo flatpak override --filesystem=xdg-config/gtk-3.0:ro --filesystem=xdg-config/gtk-4.0:ro --filesystem=~/.themes:ro --env=GTK_THEME=Matcha-dark-azul --env=ICON_THEME=Win11-blue-dark
+sudo flatpak override \
+  --filesystem=xdg-config/gtk-3.0:ro \
+  --filesystem=xdg-config/gtk-4.0:ro \
+  --filesystem=$HOME/.themes:ro \
+  --env=GTK_THEME=Matcha-dark-azul \
+  --env=ICON_THEME=Win11-blue-dark
 ```
 
-</details>
-
-<details>
-<summary><strong>Crear enlaces simbólicos (usuario)</strong></summary>
-
-```sh
-# Elimina la configuración anterior de i3
-rm -rf /home/$USER/.config/i3
-
-# Crea enlaces simbólicos para las configuraciones personalizadas
-ln -s /home/$USER/Plantillas/dotfiles/i3 /home/$USER/.config/i3
-ln -s /home/$USER/Plantillas/dotfiles/rofi /home/$USER/.config
-ln -s /home/$USER/Plantillas/dotfiles/picom /home/$USER/.config
-ln -s /home/$USER/Plantillas/dotfiles/dunst /home/$USER/.config
-ln -s /home/$USER/Plantillas/dotfiles/config/systemd /home/$USER/.config
-ln -s /home/$USER/Plantillas/dotfiles/screenlayout /home/$USER/.screenlayout
-ln -s /home/$USER/Plantillas/dotfiles/ranger /home/$USER/.config/
-ln -s /home/$USER/Plantillas/dotfiles/config/gtk-3.0/settings.ini /home/$USER/.config/gtk-3.0/
-ln -s /home/$USER/Plantillas/dotfiles/i3/scripts/monitor_detect.sh /usr/bin/dmonitor
-ln -s /home/$USER/Plantillas/dotfiles/config/config.fish /home/$USER/.config/fish/
-```
-
-</details>
-
-<details>
-<summary><strong>Con sudo o ROOT</strong></summary>
-
-```sh
-# Copia la configuración del touchpad
-cp /home/luism/Plantillas/dotfiles/etc/X11/30-touchpad.conf /etc/X11/xorg.conf.d/
-
-# Crea enlaces simbólicos para scripts y utilidades
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/bspcolorpicker /usr/bin/color-picker
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3wc.sh /usr/bin/i3wc
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/power-profiles /usr/bin/power-profiles
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3exit /usr/bin/
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/blurlock /usr/bin/
-ln -s /home/luism/Plantillas/dotfiles/usr/bin/i3-scrot /usr/bin/
-```
-
-</details>
-
-## Verificar Navegador Web Predeterminado
+Verificar navegador por defecto:
 
 ```sh
 xdg-settings get default-web-browser
 ```
 
-## Establecer Navegador y Explorador de Archivos Predeterminados
+Establecer navegador y explorador de archivos por defecto:
 
 ```sh
 xdg-mime default com.microsoft.EdgeDev.desktop x-scheme-handler/https x-scheme-handler/http
 xdg-mime default thunar.desktop inode/directory
 ```
 
----
+## Estructura del repositorio
 
-**Tokens útiles para configuración de ventanas en i3:**
+Aquí se listan las carpetas principales y su propósito resumido:
 
-`class`, `instance`, `window_role`, `con_id`, `id`, `window_type`, `con_mark`, `title`, `urgent`, `workspace`, `machine`, `floating_from`, `tiling_from`, `tiling`, `floating`, `all`
+- `config/` — configuraciones generales (fish, gtk, systemd de usuario, etc.)
+- `i3/` — configuración y scripts para i3
+- `rofi/` — temas y configuraciones de rofi
+- `picom/` — configuración de compositor
+- `dunst/` — configuración de notificaciones
+- `ranger/` — configuración, comandos y plugins para ranger
+- `usr/bin/` — scripts/binaries personalizados
+- `screenlayout/` — scripts para disposición de monitores
+
+Revisa cada carpeta para ver ejemplos y personalizar según tu sistema.
+
+## Notas importantes
+
+- Reemplaza rutas absolutas (por ejemplo `/home/luism`) por `$HOME` para portar las configuraciones.
+- Haz backup antes de sobrescribir configuraciones existentes.
+- Algunos enlaces a `/usr/bin` requieren privilegios y deben hacerse con `sudo`.
+
+## Contribuir
+
+Si quieres proponer mejoras o correcciones:
+
+1. Haz fork del repositorio.
+1. Crea una rama con tu cambio.
+1. Abre un pull request con una descripción clara.
+
+## Licencia
+
+Este repositorio está bajo la Licencia MIT. Consulta el archivo `LICENSE` para más detalles.
