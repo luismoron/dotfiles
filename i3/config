@@ -89,16 +89,22 @@ bindsym $mod+Shift+r restart
 
 exec --no-startup-id pkill picom
 exec --no-startup-id nm-applet
-exec --no-startup-id pa-applet
+# exec --no-startup-id pa-applet (no existe, usar volumeicon)
 exec --no-startup-id sleep 1; picom --daemon
 exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
+exec --no-startup-id gnome-keyring-daemon --start --components=secrets,pkcs11,ssh
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme 'Win11-dark'
+exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-azul'
+exec --no-startup-id gsettings set org.gnome.desktop.interface font-name 'Roboto 12'
+exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-application-prefer-dark-theme true
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id blueman-applet
 exec --no-startup-id firewall-applet
-exec --no-startup-id pa-notify
-exec_always --no-startup-id workstyle
+# exec --no-startup-id pa-notify (no existe)
+exec_always --no-startup-id ~/.config/i3/scripts/monitor_detect.sh
+exec_always --no-startup-id /home/luism/.cargo/bin/workstyle
 
 #######################
 ##  Atajos de apps    ##
@@ -260,7 +266,6 @@ smart_gaps on
 
 # Bordes inteligentes
 smart_borders on
-default_border pixel 4
 
 # Modo de gaps
 set $mode_gaps Gaps: (o) externo, (i) interno
@@ -430,7 +435,7 @@ bindsym $mod+m bar mode toggle
 bar {
         font xft:Roboto 11
         status_command i3status -c $HOME/Plantillas/dotfiles/i3status/i3status.conf | $HOME/Plantillas/dotfiles/i3status/i3spotifystatus/pystatus.py
-        tray_output eDP
+        # tray_output HDMI-A-0
         colors {
                 background #00244c
                 statusline #fefefe
