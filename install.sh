@@ -75,6 +75,11 @@ mkdir -p "$HOME/.config/alacritty"
 # ============================
 info "Creando enlaces simbólicos en ~/.config/..."
 
+rm -rf "$HOME/.config/i3" "$HOME/.config/rofi" "$HOME/.config/picom" \
+       "$HOME/.config/dunst" "$HOME/.config/ranger" "$HOME/.screenlayout" \
+       "$HOME/.config/fish/config.fish" "$HOME/.config/gtk-3.0/settings.ini" \
+       "$HOME/.config/alacritty/alacritty.toml"
+
 ln -nsf "$REPO_DIR/i3" "$HOME/.config/i3"
 ln -nsf "$REPO_DIR/rofi" "$HOME/.config/rofi"
 ln -nsf "$REPO_DIR/picom" "$HOME/.config/picom"
@@ -90,6 +95,7 @@ ln -nsf "$REPO_DIR/alacritty/alacritty.toml" "$HOME/.config/alacritty/alacritty.
 # ============================
 if [[ -d "$REPO_DIR/config/systemd/user" ]]; then
     info "Enlazando servicios systemd de usuario..."
+    rm -rf "$HOME/.config/systemd/user/"*.service "$HOME/.config/systemd/user/"*.target 2>/dev/null || true
     for service in "$REPO_DIR/config/systemd/user/"*.service "$REPO_DIR/config/systemd/user/"*.target; do
         if [[ -f "$service" ]]; then
             name=$(basename "$service")
