@@ -367,6 +367,7 @@ for_window [class="Protonvpn" instance="protonvpn" title="Proton VPN"] floating 
 for_window [class="gnome-software" instance="gnome-software" title="Software"] floating enable
 for_window [class="Bitwarden" instance="bitwarden" title="Bitwarden" window_role="browser-window"] floating enable
 for_window [class="Brave-browser" title="Bitwarden" window_role="pop-up"] floating enable
+for_window [class="feh"] floating enable
 
 # Cambiar automáticamente al espacio de trabajo con ventana urgente
 for_window [urgent=latest] focus
