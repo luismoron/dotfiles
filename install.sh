@@ -154,7 +154,15 @@ if [[ -f "$REPO_DIR/etc/polkit-1/rules.d/80-udisks2-wheel.rules" ]]; then
 fi
 
 # ============================
-# 8. Verificar instalación
+# 8. Temas de Xfce4 Terminal
+# ============================
+if [[ -d "$REPO_DIR/xfce4/terminal/colorschemes" ]]; then
+    info "Instalando temas de Xfce4 Terminal..."
+    sudo cp "$REPO_DIR/xfce4/terminal/colorschemes/"*.theme /usr/share/xfce4/terminal/colorschemes/
+fi
+
+# ============================
+# 9. Verificar instalación
 # ============================
 info "Verificando enlaces..."
 
