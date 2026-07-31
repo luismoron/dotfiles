@@ -16,10 +16,10 @@ style = "Bold"
 draw_bold_text_with_bright_colors = true
 
 [colors.primary]
-background = '#0f2235'
-foreground = '#c4cbd4'
-dim_foreground = '#8b9298'
-bright_foreground = '#e0e6ec'
+background = '#0a1628'
+foreground = '#ffffff'
+dim_foreground = '#aabbcc'
+bright_foreground = '#ffffff'
 
 [colors.cursor]
 text = '#0f2235'
@@ -50,23 +50,23 @@ text = '#0f2235'
 background = '#53cafa'
 
 [colors.normal]
-black = '#2d3436'
-red = '#ff3838'
-green = '#00ff7f'
-yellow = '#ffb142'
+black = '#1a1a2e'
+red = '#ff0055'
+green = '#00ff88'
+yellow = '#ffcc00'
 blue = '#00aaff'
-magenta = '#ff49ff'
-cyan = '#00fff7'
+magenta = '#ff00ff'
+cyan = '#00ffff'
 white = '#ffffff'
 
 [colors.bright]
-black = '#636e72'
-red = '#ff6b6b'
-green = '#55efc4'
-yellow = '#ffeaa7'
-blue = '#74b9ff'
-magenta = '#fd79a8'
-cyan = '#81ecec'
+black = '#404060'
+red = '#ff3377'
+green = '#66ffaa'
+yellow = '#ffe066'
+blue = '#66ccff'
+magenta = '#ff77ff'
+cyan = '#66ffff'
 white = '#ffffff'
 
 [colors.dim]

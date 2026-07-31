@@ -1,10 +1,10 @@
 [Scheme]
 Name=Dark Blue i3
 ColorForeground=#ffffff
-ColorBackground=#0f2235
-ColorCursor=#53cafa
-ColorSelection=#007bff
-ColorSelectionBackground=#53cafa
+ColorBackground=#0a1628
+ColorCursor=#00d4ff
+ColorSelection=#00aaff
+ColorSelectionBackground=#00d4ff
 ColorPalette=
-#2d3436;#ff3838;#00ff7f;#ffb142;#00aaff;#ff49ff;#00fff7;#ffffff;
-#636e72;#ff6b6b;#55efc4;#ffeaa7;#74b9ff;#fd79a8;#81ecec;#ffffff;
+#1a1a2e;#ff0055;#00ff88;#ffcc00;#00aaff;#ff00ff;#00ffff;#ffffff;
+#404060;#ff3377;#66ffaa;#ffe066;#66ccff;#ff77ff;#66ffff;#ffffff;
