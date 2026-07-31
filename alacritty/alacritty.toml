@@ -1,49 +1,53 @@
-[alacritty]
-window.opacity = 0.95
+[window]
+opacity = 0.95
 
-[alacritty.font]
+[font]
 size = 11.0
-normal = { family = "Iosevka Term Medium" }
-bold = { family = "Iosevka Term Medium" }
 
-[alacritty.colors]
+[font.normal]
+family = "Iosevka Term Medium"
+
+[font.bold]
+family = "Iosevka Term Medium"
+
+[colors]
 draw_bold_text_with_bright_colors = true
 
-[alacritty.colors.primary]
+[colors.primary]
 background = '#0f2235'
 foreground = '#c4cbd4'
 dim_foreground = '#8b9298'
 bright_foreground = '#e0e6ec'
 
-[alacritty.colors.cursor]
+[colors.cursor]
 text = '#0f2235'
 cursor = '#53cafa'
 
-[alacritty.colors.vi_mode_cursor]
+[colors.vi_mode_cursor]
 text = '#0f2235'
 cursor = '#65acff'
 
-[alacritty.colors.search.matches]
+[colors.search.matches]
 foreground = '#0f2235'
 background = '#53cafa'
 
-[alacritty.colors.search.focused_match]
+[colors.search.focused_match]
 foreground = '#0f2235'
 background = '#00cc66'
 
-[alacritty.colors.hints.start]
+[colors.hints.start]
 foreground = '#0f2235'
 background = '#ffcc00'
 
-[alacritty.colors.hints.end]
+[colors.hints.end]
 foreground = '#ffcc00'
 background = '#268bd2'
 
-[alacritty.colors.selection]
+[colors.selection]
 text = '#0f2235'
 background = '#53cafa'
 
-[alacritty.colors.normal]
+[colors.normal]
 black = '#1e272e'
 red = '#dc3232'
 green = '#00cc66'
@@ -53,7 +57,7 @@ magenta = '#ff33bb'
 cyan = '#00ffff'
 white = '#c4cbd4'
 
-[alacritty.colors.bright]
+[colors.bright]
 black = '#3d4751'
 red = '#ff4d4d'
 green = '#00e676'
@@ -63,7 +67,7 @@ magenta = '#ff55cc'
 cyan = '#33ffff'
 white = '#e0e6ec'
 
-[alacritty.colors.dim]
+[colors.dim]
 black = '#151d24'
 red = '#9b2c2c'
 green = '#00a854'
@@ -73,4 +77,4 @@ magenta = '#b34792'
 cyan = '#008b8b'
 white = '#8b9298'
 
-[alacritty.colors.indexed_colors]
+
