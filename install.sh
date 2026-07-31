@@ -92,7 +92,7 @@ if [[ -d "$REPO_DIR/config/systemd/user" ]]; then
     info "Enlazando servicios systemd de usuario..."
     for service in "$REPO_DIR/config/systemd/user/"*.service "$REPO_DIR/config/systemd/user/"*.target; do
         if [[ -f "$service" ]]; then
-            local name=$(basename "$service")
+            name=$(basename "$service")
             ln -nsf "$service" "$HOME/.config/systemd/user/$name"
             info "  - $name"
         fi
@@ -116,7 +116,7 @@ usr_bins=(
 
 for bin in "${usr_bins[@]}"; do
     if [[ -f "$REPO_DIR/usr/bin/$bin" ]]; then
-        local target_name="${bin%.sh}"
+        target_name="${bin%.sh}"
         sudo ln -nsf "$REPO_DIR/usr/bin/$bin" "/usr/bin/$target_name"
         info "  - /usr/bin/$target_name"
     else
