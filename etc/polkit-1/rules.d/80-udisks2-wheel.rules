@@ -1,6 +1,9 @@
 polkit.addRule(function(action, subject) {
     if ((action.id == "org.freedesktop.UDisks2.filesystem-mount" ||
+         action.id == "org.freedesktop.UDisks2.filesystem-mount-other-seat" ||
+         action.id == "org.freedesktop.UDisks2.filesystem-mount-other-user" ||
          action.id == "org.freedesktop.UDisks2.filesystem-unmount" ||
+         action.id == "org.freedesktop.UDisks2.filesystem-unmount-other-user" ||
          action.id == "org.freedesktop.UDisks2.filesystem-mount-system" ||
          action.id == "org.freedesktop.UDisks2.loop-delete" ||
          action.id == "org.freedesktop.UDisks2.manager" ||
