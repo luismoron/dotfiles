@@ -121,12 +121,12 @@ bindsym $mod+Shift+t    exec telegram
 bindsym $mod+Shift+m    exec spotify
 bindsym $mod+Shift+e    exec thunar
 
-# Captura de pantalla
+# Captura de pantalla (Super)
 bindsym F11             exec --no-startup-id i3-scrot
-bindsym $mod+Mod1+p     exec --no-startup-id i3-scrot
-bindsym $mod+Mod1+o     exec --no-startup-id i3-scrot -dc
-bindsym $mod+Mod1+l --release exec --no-startup-id i3-scrot -s
-bindsym $mod+mod1+k --release exec --no-startup-id i3-scrot -sc
+bindsym Mod4+p          exec --no-startup-id i3-scrot
+bindsym Mod4+o          exec --no-startup-id i3-scrot -dc
+bindsym Mod4+l --release exec --no-startup-id i3-scrot -s
+bindsym Mod4+k --release exec --no-startup-id i3-scrot -sc
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
 
 ########################
