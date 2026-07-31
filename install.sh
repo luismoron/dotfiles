@@ -71,6 +71,13 @@ mkdir -p "$HOME/.config/gtk-3.0"
 mkdir -p "$HOME/.config/alacritty"
 
 # ============================
+# 2.5. Configurar tema de iconos global
+# ============================
+info "Configurando tema de iconos..."
+echo 'gtk-icon-theme-name="Win11-blue-dark"' > "$HOME/.gtkrc-2.0.mine"
+dconf write /org/gnome/desktop/interface/icon-theme "'Win11-blue-dark'" 2>/dev/null || true
+
+# ============================
 # 3. Enlaces simbólicos de usuario (.config)
 # ============================
 info "Creando enlaces simbólicos en ~/.config/..."
