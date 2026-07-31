@@ -102,6 +102,7 @@ exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-application-p
 exec --no-startup-id xdg-user-dirs-update
 exec --no-startup-id blueman-applet
 exec --no-startup-id firewall-applet
+exec --no-startup-id udiskie -2 -n
 # exec --no-startup-id pa-notify (no existe)
 exec_always --no-startup-id ~/.config/i3/scripts/monitor_detect.sh
 exec_always --no-startup-id /home/luism/.cargo/bin/workstyle
