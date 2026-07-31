@@ -202,7 +202,7 @@
     enable_recursive_icon_lookup = true
 
     # Set icon theme (only used for recursive icon lookup)
-    icon_theme = Win11-dark
+    icon_theme = Win11-blue-dark
     # You can also set multiple icon themes, with the leftmost one being used first.
     # icon_theme = "Adwaita, breeze"
 
@@ -218,7 +218,7 @@
     max_icon_size = 128
 
     # Paths to default icons (only neccesary when not using recursive icon lookup)
-    icon_path = /home/luism/.local/share/icons/Win11-dark/
+    icon_path = /home/luism/.local/share/icons/Win11-blue-dark/
 
     ### History ###
 

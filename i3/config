@@ -95,7 +95,7 @@ exec --no-startup-id start_conky --daemonize
 exec --no-startup-id clipit
 exec --no-startup-id gnome-keyring-daemon --start --components=secrets,pkcs11,ssh
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme 'Win11-dark'
+exec --no-startup-id gsettings set org.gnome.desktop.interface icon-theme 'Win11-blue-dark'
 exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-theme 'Matcha-dark-azul'
 exec --no-startup-id gsettings set org.gnome.desktop.interface font-name 'Roboto 12'
 exec --no-startup-id gsettings set org.gnome.desktop.interface gtk-application-prefer-dark-theme true
