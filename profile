@@ -7,5 +7,5 @@ export XCURSOR_SIZE="18"
 export editor="code"
 export VISUAL="$editor"
 export EDITOR="$editor"
-export BROWSER="firefox"
+export BROWSER="google-chrome-stable"
 
