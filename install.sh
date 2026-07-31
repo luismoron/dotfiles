@@ -146,7 +146,15 @@ if [[ -f "$REPO_DIR/etc/X11/30-touchpad.conf" ]]; then
 fi
 
 # ============================
-# 7. Verificar instalación
+# 7. Polkit rules para udisks2 (requiere sudo)
+# ============================
+if [[ -f "$REPO_DIR/etc/polkit-1/rules.d/80-udisks2-wheel.rules" ]]; then
+    info "Instalando reglas de Polkit para udisks2..."
+    sudo cp "$REPO_DIR/etc/polkit-1/rules.d/80-udisks2-wheel.rules" /etc/polkit-1/rules.d/80-udisks2-wheel.rules
+fi
+
+# ============================
+# 8. Verificar instalación
 # ============================
 info "Verificando enlaces..."
 

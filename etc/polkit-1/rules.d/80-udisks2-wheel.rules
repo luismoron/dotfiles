@@ -1,0 +1,53 @@
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.freedesktop.UDisks2.filesystem-mount" ||
+         action.id == "org.freedesktop.UDisks2.filesystem-unmount" ||
+         action.id == "org.freedesktop.UDisks2.filesystem-mount-system" ||
+         action.id == "org.freedesktop.UDisks2.loop-delete" ||
+         action.id == "org.freedesktop.UDisks2.manager" ||
+         action.id == "org.freedesktop.UDisks2.drive-set-spindown" ||
+         action.id == "org.freedesktop.UDisks2.drive-spindown" ||
+         action.id == "org.freedesktop.UDisks2.drive-spindown-when-inactive" ||
+         action.id == "org.freedesktop.UDisks2.drive-start" ||
+         action.id == "org.freedesktop.UDisks2.cancel-poll" ||
+         action.id == "org.freedesktop.UDisks2.enumerate-devices" ||
+         action.id == "org.freedesktop.UDisks2.modify-device" ||
+         action.id == "org.freedesktop.UDisks2.rescan" ||
+         action.id == "org.freedesktop.UDisks2.smart.update" ||
+         action.id == "org.freedesktop.UDisks2.smart.simulate" ||
+         action.id == "org.freedesktop.UDisks2.smart.access" ||
+         action.id == "org.freedesktop.UDisks2.encrypted-unlock" ||
+         action.id == "org.freedesktop.UDisks2.encrypted-lock" ||
+         action.id == "org.freedesktop.UDisks2.encrypted-modify" ||
+         action.id == "org.freedesktop.UDisks2.encrypted-modify-system" ||
+         action.id == "org.freedesktop.UDisks2.swap-space-start" ||
+         action.id == "org.freedesktop.UDisks2.swap-space-stop" ||
+         action.id == "org.freedesktop.UDisks2.swap-space-delete" ||
+         action.id == "org.freedesktop.UDisks2.job_cancel" ||
+         action.id == "org.freedesktop.UDisks2.job_wait" ||
+         action.id == "org.freedesktop.UDisks2.partition_create" ||
+         action.id == "org.freedesktop.UDisks2.partition_delete" ||
+         action.id == "org.freedesktop.UDisks2.partitionModify" ||
+         action.id == "org.freedesktop.UDisks2.partition-table-delete" ||
+         action.id == "org.freedesktop.UDisks2.partition-table-create" ||
+         action.id == "org.freedesktop.UDisks2.raw-device-restrict" ||
+         action.id == "org.freedesktop.UDisks2.device-loops" ||
+         action.id == "org.freedesktop.UDisks2.device-lvm2" ||
+         action.id == "org.freedesktop.UDisks2.device-mdraid" ||
+         action.id == "org.freedesktop.UDisks2.device-mount-notified" ||
+         action.id == "org.freedesktop.UDisks2.init-identity" ||
+         action.id == "org.freedesktop.UDisks2.manage-md" ||
+         action.id == "org.freedesktop.UDisks2.manage-dm-membrs") &&
+        subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
+
+polkit.addRule(function(action, subject) {
+    if ((action.id == "org.gtk.vfs.file-operations" ||
+         action.id == "org.gtk.vfs.file-operations-helper") &&
+        subject.local &&
+        subject.active &&
+        subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
