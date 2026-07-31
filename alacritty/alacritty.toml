@@ -26,9 +26,8 @@ text = '#0f2235'
 cursor = '#53cafa'
 
 [cursor]
-style = "Bar"
+style = "Beam"
 thickness = 0.15
-blink = true
 
 [colors.vi_mode_cursor]
 text = '#0f2235'
